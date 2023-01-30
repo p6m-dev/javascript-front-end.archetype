@@ -1,0 +1,36 @@
+---
+desciption: "NAX Front-End Ecosystem"
+authors: ["Victor Yurkin <victor.yurkin@naxgrp.com>"]
+languages: ["TypeScript"]
+frameworks: ["React.js", "Next.js", "React Native"]
+tags: ["Front End", "UI", "Service", "Monorepo"]
+
+script:
+  - rules:
+      - source:
+          Junk Files:
+            patterns:
+              - glob: "*.DS_Store"
+            action: SKIP
+
+  - set:
+      ###############################
+      # Prompted Variables
+      ###############################
+      project:
+        prompt: "Project Name:"
+
+      ###############################
+      # Derived/Implicit Variables
+      ###############################
+
+      project-title:
+        value: "{{ project | title_case }}"
+
+      # Project Structure and Build Variables
+      artifact-id:
+        value: "{{ project | train_case }}"
+      
+  - render:
+      directory:
+        source: layouts_base
