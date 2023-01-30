@@ -1,9 +1,9 @@
-# Front-End Ecosystem Archetype
+# Front-End Project Template
 ## Usage
 To get started, [install archetect](https://archetect.github.io/getting_started.html)
 and render this template to your current working directory:
 ```bash
-$ archetect render git@gitlab.com:victoryurkin/archetype-front-end.git
+$ archetect render git@gitlab.com:nax-tech/front-end-template.git
 ```
 For information about interacting with the service, refer to the README at the generated
 project's root.
