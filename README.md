@@ -3,7 +3,7 @@
 To get started, [install archetect](https://archetect.github.io/getting_started.html)
 and render this template to your current working directory:
 ```bash
-$ archetect render git@github.com:nax-tech/front-end-template.git
+archetect render git@github.com:nax-tech/front-end-template.git
 ```
 For information about interacting with the service, refer to the README at the generated
 project's root.
