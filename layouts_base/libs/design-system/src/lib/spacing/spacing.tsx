@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { spacing, SpacingKeys } from '../tokens/spacing';
-import '../../index';
 
 interface RowProps {
   spacingKey: SpacingKeys;

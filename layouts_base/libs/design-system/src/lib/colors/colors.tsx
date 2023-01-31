@@ -1,7 +1,6 @@
 /* eslint-disable no-self-compare */
 import { FC } from 'react';
 import { colors, modes, theems } from '../tokens/colors';
-import '../../index';
 
 export interface ColorsProps {
   /**
