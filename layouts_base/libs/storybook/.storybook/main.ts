@@ -23,6 +23,9 @@ const config: StorybookViteConfig = {
     );
     return config;
   },
+  typescript: {
+    reactDocgen: 'react-docgen',
+  },
 };
 
 module.exports = config;

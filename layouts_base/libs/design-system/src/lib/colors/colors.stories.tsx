@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Colors } from './colors';
 
@@ -10,12 +11,4 @@ export default Story;
 
 const Template: ComponentStory<typeof Colors> = (args) => <Colors {...args} />;
 
-export const ThemeBlue = Template.bind({});
-ThemeBlue.args = {
-  theme: 'blue',
-};
-
-export const ThemeGreen = Template.bind({});
-ThemeGreen.args = {
-  theme: 'green',
-};
+export const Theems = Template.bind({});

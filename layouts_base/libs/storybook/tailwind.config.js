@@ -4,15 +4,11 @@ const { join } = require('path');
 const content = [
   join(
     __dirname,
-    '{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
+    '{src,pages,components}/**/*!(*.stories|*.spec).{js,jsx,ts,tsx,html}'
   ),
   join(
     __dirname,
-    '../components/web/{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-  ),
-  join(
-    __dirname,
-    '../design-system/{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
+    '../design-system/{src,pages,components}/**/*!(*.stories|*.spec).{js,jsx,ts,tsx,html}'
   ),
   ...createGlobPatternsForDependencies(__dirname),
 ];
@@ -23,4 +19,12 @@ module.exports = {
   darkMode: 'class',
   plugins: [],
   presets: [require('../../tailwind-presets.json')],
+  safelist: [
+    {
+      pattern: /^bg-/,
+    },
+    {
+      pattern: /^text-/,
+    },
+  ],
 };

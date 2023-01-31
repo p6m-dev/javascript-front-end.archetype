@@ -1,12 +1,9 @@
-import type { StorybookConfig } from '@storybook/core-common';
+import type { StorybookViteConfig } from '@storybook/builder-vite';
 
-export const rootMain: StorybookConfig = {
+export const rootMain: StorybookViteConfig = {
   stories: [],
   addons: ['@storybook/addon-essentials'],
-  // webpackFinal: async (config, { configType }) => {
-  //   // Make whatever fine-grained changes you need that should apply to all storybook configs
-
-  //   // Return the altered config
-  //   return config;
-  // },
+  viteFinal: async (config) => {
+    return config;
+  },
 };
