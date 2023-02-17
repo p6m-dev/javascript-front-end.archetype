@@ -18,5 +18,5 @@ When rendering the archetype, you'll be prompted for the following values:
 For a list of all derived properties and examples of the property relationships, see [archetype.yml](./archetype.yml).
 
 ## What's Inside
-This archetype is based on the [NX Monorepo](https://nx.dev) template and uses [YARN](https://yarnpkg.com)
+This archetype is based on the [NX Monorepo](https://nx.dev) template and uses [PNPM](https://pnpm.io)
 as its package manager.
