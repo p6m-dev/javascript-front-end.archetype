@@ -20,6 +20,12 @@ script:
       project:
         prompt: "Project Name:"
 
+      aws-account-id:
+        prompt: "AWS Account ID:"
+
+      aws-bucket-name:
+        prompt: "AWS Terraform Back-End S3 Bucket Name:"
+
       ###############################
       # Derived/Implicit Variables
       ###############################

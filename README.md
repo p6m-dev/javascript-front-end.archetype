@@ -14,6 +14,8 @@ When rendering the archetype, you'll be prompted for the following values:
 | Property | Description | Example |
 |----------| ----------- | ------- |
 | `project`| General name that represents the project that is used to set the entity, service, and RPC stub names. | WaterColor
+| `aws-account-id`| AWS Sandbox environment account id  | 632133427543
+| `aws-bucket-name`| AWS Sandbox environment s3 bucket name for the Terraform back-end | ntg-lndz-tfstate-632133427543-123
 
 For a list of all derived properties and examples of the property relationships, see [archetype.yml](./archetype.yml).
 
