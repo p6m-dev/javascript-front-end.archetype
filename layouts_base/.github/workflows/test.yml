@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${ { secrets.NPM_GITHUB_TOKEN } }
 
 jobs:
   test-build:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: ${ { github.event.pull_request.head.ref } }
           fetch-depth: 0
 
       - name: Setup NodeJS 16
@@ -36,11 +36,11 @@ jobs:
         id: pnpm-cache
         with:
           path: |
-            ${{ steps.pnpm-cache-dir-path.outputs.dir }}
+            ${ { steps.pnpm-cache-dir-path.outputs.dir } }
             **\node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${ { runner.os } }-pnpm-${ { hashFiles('**/pnpm-lock.yaml') } }
           restore-keys: |
-            ${{ runner.os }}-pnpm-
+            ${ { runner.os } }-pnpm-
 
       - name: Install dependencies
         if: steps.pnpm-cache.outputs.cache-hit != 'true'
