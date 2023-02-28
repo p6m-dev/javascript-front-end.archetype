@@ -10,7 +10,7 @@
   "private": true,
   "dependencies": {
     "@datadog/browser-logs": "^4.29.1",
-    "@nax-tech/assets": "^0.11.0",
+    "@nax-tech/assets": "^0.12.0",
     "@nax-tech/clients-cookies": "^0.2.0",
     "@nax-tech/clients-http": "^0.2.0",
     "@nax-tech/clients-local": "^0.4.0",
@@ -46,7 +46,7 @@
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "7.12.13",
     "@nax-tech/design-system": "^0.3.0",
-    "@nax-tech/react": "^0.16.0",
+    "@nax-tech/react": "^0.18.0",
     "@nrwl/cypress": "15.4.5",
     "@nrwl/eslint-plugin-nx": "15.4.5",
     "@nrwl/jest": "15.4.5",
