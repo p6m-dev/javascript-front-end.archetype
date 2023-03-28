@@ -102,7 +102,6 @@
     "@zeplin/sdk": "^1.15.0",
     "autoprefixer": "^10.4.13",
     "aws-cdk": "^2.59.0",
-    "aws-cdk-lib": "^2.59.0",
     "babel-jest": "28.1.1",
     "babel-loader": "8.1.0",
     "cypress": "^11.0.0",
