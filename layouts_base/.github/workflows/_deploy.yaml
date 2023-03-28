@@ -29,7 +29,7 @@ env:
   AWS_DEFAULT_REGION: us-west-2
   AWS_REGION: us-west-2
   AWS_DEFAULT_OUTPUT: json
-  GITHUB_TOKEN: ${ { secrets.npm_github_token } }
+  GITHUB_TOKEN: ${{'{'}}{ secrets.npm_github_token }}
 
 jobs:
   release:
@@ -39,8 +39,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::${ { inputs.account_id } }:role/${ { inputs.aws_role_name } }
-          aws-region: ${ { env.AWS_REGION } }
+          role-to-assume: arn:aws:iam::${{'{'}}{ inputs.account_id }}:role/${{'{'}}{ inputs.aws_role_name }}
+          aws-region: ${{'{'}}{ env.AWS_REGION }}
 
       - name: Check out repository
         uses: actions/checkout@v2
@@ -50,7 +50,7 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1.2.1
         with:
-          terraform_version: ${ { env.TERRAFORM_VERSION } }
+          terraform_version: ${{'{'}}{ env.TERRAFORM_VERSION }}
           terraform_wrapper: false
 
       - name: Setup NodeJS 16
@@ -70,11 +70,11 @@ jobs:
         id: pnpm-cache
         with:
           path: |
-            ${ { steps.pnpm-cache-dir-path.outputs.dir } }
+            ${{'{'}}{ steps.pnpm-cache-dir-path.outputs.dir }}
             **\node_modules
-          key: ${ { runner.os } }-pnpm-${ { hashFiles('**/pnpm-lock.yaml') } }
+          key: ${{'{'}}{ runner.os }}-pnpm-${{'{'}}{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${ { runner.os } }-pnpm-
+            ${{'{'}}{ runner.os }}-pnpm-
 
       - name: Install dependencies
         if: steps.pnpm-cache.outputs.cache-hit != 'true'
@@ -97,7 +97,7 @@ jobs:
 
       - name: Provision
         env:
-          AWS_BUCKET_NAME: ${ { inputs.bucket_name } }
+          AWS_BUCKET_NAME: ${{'{'}}{ inputs.bucket_name }}
         run: |
           for APP in $AFFECTED_APPS
           do
