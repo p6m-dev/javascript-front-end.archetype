@@ -30,5 +30,6 @@ jobs:
       - name: Update dependencies
         run: |
             cd layouts_base
+            pnpm install
             node ../.github/scripts/update-nax-packages.mjs
 
