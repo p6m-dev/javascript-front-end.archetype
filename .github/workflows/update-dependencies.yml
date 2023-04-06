@@ -1,0 +1,34 @@
+name: Update NAX dependencies
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Setup NodeJS 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Update dependencies
+        run: |
+            cd layouts_base
+            node ../.github/scripts/update-nax-packages.mjs
+
