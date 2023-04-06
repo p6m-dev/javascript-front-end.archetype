@@ -28,8 +28,13 @@ jobs:
         run: npm install -g pnpm
 
       - name: Update dependencies
-        run: |
-            cd layouts_base
-            pnpm install
-            node ../.github/scripts/update-nax-packages.mjs
+        run: ./.github/scripts/update-nax-packages.sh
+        shell: bash
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: "chore(core): AUTOMATED - Updating the NAX dependencies"
+
 
