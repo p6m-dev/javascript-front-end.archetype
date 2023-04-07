@@ -1,0 +1,40 @@
+name: Update NAX dependencies
+
+on:
+    push:
+      branches:
+        - main
+
+env:
+  GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Setup NodeJS 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Update dependencies
+        run: ./.github/scripts/update-nax-packages.sh
+        shell: bash
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: "chore(core): AUTOMATED - Updating the NAX dependencies"
+
+

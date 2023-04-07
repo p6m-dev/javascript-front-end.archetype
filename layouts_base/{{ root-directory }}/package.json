@@ -5,7 +5,8 @@
   "scripts": {
     "storybook": "npx nx start storybook",
     "zeplin-connect": "zeplin connect",
-    "zeplin-connect-dev-mode": "zeplin connect --dev"
+    "zeplin-connect-dev-mode": "zeplin connect --dev",
+    "update-nax": "pnpm -r up '@nax-tech/*' --save --latest"
   },
   "private": true,
   "dependencies": {
