@@ -14,11 +14,11 @@ script:
             action: SKIP
 
   - set:
-      ###############################
-      # Prompted Variables
-      ###############################
-      project:
-        prompt: "Project Name:"
+      org-prefix:
+        prompt: "Org Prefix (JV Name):"
+
+      org-suffix:
+        prompt: "Org Suffix (JV Project):"
 
       aws-account-id:
         prompt: "AWS Account ID:"
@@ -26,17 +26,122 @@ script:
       aws-bucket-name:
         prompt: "AWS Terraform Back-End S3 Bucket Name:"
 
+      prj-prefix:
+        value: "front-end"
+
+      prj-suffix:
+        value: "apps"
+
       ###############################
       # Derived/Implicit Variables
       ###############################
+      organization-name:
+        value: "{{ org-prefix | train-case }}-{{ org-suffix | train-case }}"
 
-      project-title:
-        value: "{{ project | title_case }}"
+      organization-prefix:
+        value: "{{ org-prefix | train_case }}"
+
+      organization_prefix:
+        value: "{{ org-prefix | snake_case }}"
+
+      organization-suffix:
+        value: "{{ org-suffix | train_case }}"
+
+      organization_suffix:
+        value: "{{ org-suffix | snake_case }}"
+
+      project_prefix:
+        value: "{{ prj-prefix | snake_case }}"
+
+      project-prefix:
+        value: "{{ prj-prefix | train_case }}"
+
+      project_suffix:
+        value: "{{ prj-suffix | snake_case }}"
+
+      project-suffix:
+        value: "{{ prj-suffix | train_case }}"
 
       # Project Structure and Build Variables
+      group-id:
+        value: "{{ organization_prefix | package_case }}.{{ organization_suffix | package_case }}"
+
+      group-directory:
+        value: "{{ group-id | package_to_directory }}/platform"
+
       artifact-id:
-        value: "{{ project | train_case }}"
-      
+        value: "{{ organization-name }}-{{ project-prefix }}-{{ project-suffix }}"
+
+      root-directory:
+        value: "{{ project-prefix }}-{{ project-suffix }}"
+
+      artifact-prefix:
+        value: "{{ organization-name }}"
+
+      root_package:
+        value: "{{ group-id }}.{{ project_prefix | package_case }}"
+
+      root_directory:
+        value: "{{ root_package | package_to_directory }}"
+
+      property-prefix:
+        value: "{{ artifact-id }}"
+
+      package-name:
+        value: "{{ org-prefix }}-{{ org-suffix }}"
+
+      base-name:
+        value: "{{ org-suffix }}"
+
+      default-app:
+        prompt: "Front-end application:"
+        type:
+          enum:
+            - React.js
+            - Next.js
+            - React Native
+            - Expo
+            - None
+        default: None
+
   - render:
       directory:
         source: layouts_base
+
+  - if:
+      is-true: "{{ default-app != 'None' }}"
+      then:
+        - exec:
+            command: "pnpm"
+            args:
+              - "install"
+              - "--dir"
+              - "{{ root-directory }}"
+
+  - if:
+      is-true: "{{ default-app == 'React.js' }}"
+      then:
+        - exec:
+            command: "pnpm"
+            args:
+              - "exec"
+              - "nx"
+              - "generate"
+              - "@nax-tech/react:application"
+              - "webapp"
+              - "--no-interactive"
+            cwd: "{{ root-directory }}"
+
+  - if:
+      is-true: "{{ default-app == 'Next.js' }}"
+      then:
+        - exec:
+            command: "pnpm"
+            args:
+              - "exec"
+              - "nx"
+              - "generate"
+              - "@nax-tech/next:application"
+              - "website"
+              - "--no-interactive"
+            cwd: "{{ root-directory }}"
