@@ -1,9 +1,8 @@
 name: Update NAX dependencies
 
 on:
-    push:
-      branches:
-        - main
+  repository_dispatch:
+    types: [nax_update_deps]
 
 env:
   GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
