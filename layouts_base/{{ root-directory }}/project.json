@@ -1,0 +1,7 @@
+{
+    "orgPrefix": "{{org-prefix}}",
+    "orgSuffix": "{{org-suffix}}",
+    "deliveryType": "{{delivery-type}}",
+    "prjPrefix": "{{prj-prefix}}",
+    "prjSuffix": "{{prj-suffix}}"
+}
