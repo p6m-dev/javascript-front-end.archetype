@@ -22,14 +22,12 @@ script:
 
       delivery-type:
         prompt: "Delivery type: container or static"
-        default: "container"
-
-      aws-account-id:
-        prompt: "AWS Account ID:"
-
-      aws-bucket-name:
-        prompt: "AWS Terraform Back-End S3 Bucket Name:"
-
+        type:
+          enum:
+            - container
+            - static
+        default: container
+              
       prj-prefix:
         value: "front-end"
 
@@ -76,9 +74,6 @@ script:
       artifact-id:
         value: "{{ organization-name }}-{{ project-prefix }}-{{ project-suffix }}"
 
-      root-directory:
-        value: "{{ project-prefix }}-{{ project-suffix }}"
-
       artifact-prefix:
         value: "{{ organization-name }}"
 
@@ -107,6 +102,20 @@ script:
             - Expo
             - None
         default: None
+
+  - if:
+      is-true: "{{ delivery-type == 'static' }}"
+      then:
+        - set:
+            aws-account-id:
+              prompt: "AWS Account ID:"
+
+            aws-bucket-name:
+              prompt: "AWS Terraform Back-End S3 Bucket Name:"
+
+  - set:
+      root-directory:
+        default: "{{ project-prefix }}-{{ project-suffix }}"
 
   - render:
       directory:
