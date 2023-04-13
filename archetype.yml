@@ -20,6 +20,10 @@ script:
       org-suffix:
         prompt: "Org Suffix (JV Project):"
 
+      delivery-type:
+        prompt: "Delivery type: container or static"
+        default: "container"
+
       aws-account-id:
         prompt: "AWS Account ID:"
 
