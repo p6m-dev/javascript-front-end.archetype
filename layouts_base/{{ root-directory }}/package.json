@@ -51,7 +51,7 @@
     "@nax-tech/design-system": "^0.13.0",
     "@nax-tech/javascript": "^0.13.0",
     "@nax-tech/next": "^0.9.0",
-    "@nax-tech/react": "^0.42.0",
+    "@nax-tech/react": "^0.43.0",
     "@nax-tech/react-native": "^0.2.0",
     "@nrwl/cypress": "15.4.5",
     "@nrwl/eslint-plugin-nx": "15.4.5",
