@@ -112,8 +112,7 @@ script:
 
             aws-bucket-name:
               prompt: "AWS Terraform Back-End S3 Bucket Name:"
-      is-true: "{{ delivery-type == 'container' }}"
-      then:
+      else:
         - set:
             aws-account-id:
               value: "xxxxxxxxxx"
