@@ -16,6 +16,6 @@ jobs:
       ARTIFACTORY_IDENTITY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
       NPM_GITHUB_TOKEN: ${{'{'}}{ secrets.NPM_GITHUB_TOKEN }}
     with:
-      ARTIFACTORY_REGISTRY: naxgrp.jfrog.io
-      AWS_ACCOUNT_ID: '{{aws-account-id}}'
-      AWS_TFSTATE_BUCKET: '{{aws-bucket-name}}'
+      ARTIFACTORY_REGISTRY: "naxgrp.jfrog.io"
+      AWS_ACCOUNT_ID: "{{aws-account-id}}"
+      AWS_TFSTATE_BUCKET: "{{aws-bucket-name}}"
