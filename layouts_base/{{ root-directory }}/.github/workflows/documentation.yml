@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{'{'}}{ secrets.GITHUB_TOKEN }}
   STORYBOOK_BASE_PATH: /component-library
   NODE_OPTIONS: --max_old_space_size=4096
 
@@ -26,7 +26,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{'{'}}{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
@@ -52,11 +52,11 @@ jobs:
         id: pnpm-cache
         with:
           path: |
-            ${{ steps.pnpm-cache-dir-path.outputs.dir }}
+            ${{'{'}}{ steps.pnpm-cache-dir-path.outputs.dir }}
             **\node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{'{'}}{ runner.os }}-pnpm-${{'{'}}{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-
+            ${{'{'}}{ runner.os }}-pnpm-
 
       - name: Install dependencies
         if: steps.pnpm-cache.outputs.cache-hit != 'true'
