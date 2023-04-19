@@ -12,6 +12,12 @@ script:
             patterns:
               - glob: "*.DS_Store"
             action: SKIP
+          Assets:
+            patterns:
+              - glob: "*.png"
+              - glob: "*.jpg"
+              - glob: "*.ico"
+            action: SKIP
 
   - set:
       org-prefix:
