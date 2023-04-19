@@ -32,6 +32,7 @@
     "core-js": "^3.6.5",
     "immer": "^9.0.17",
     "lodash": "^4.17.21",
+    "next": "^13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.41.5",
