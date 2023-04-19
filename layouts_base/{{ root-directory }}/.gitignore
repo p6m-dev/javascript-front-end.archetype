@@ -43,4 +43,8 @@ Thumbs.db
 # Next.js
 .next
 
+# Generated Docusaurus files
+.docusaurus/
+.cache-loader/
+
 .nx-container
