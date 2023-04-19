@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build_and_deploy:
+  test:
     uses: nax-platform/github-actions/.github/workflows/test-front-end.yaml@main
     secrets:
-      GITHUB_TOKEN: ${{'{'}}{ secrets.NPM_GITHUB_TOKEN }}
+      NPM_GITHUB_TOKEN: ${{'{'}}{ secrets.NPM_GITHUB_TOKEN }}
