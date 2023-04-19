@@ -14,6 +14,7 @@ jobs:
     secrets:
       ARTIFACTORY_USERNAME: ${{'{'}}{ secrets.ARTIFACTORY_USERNAME }}
       ARTIFACTORY_IDENTITY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
+      UPDATE_MANIFEST_TOKEN: ${{'{'}}{ secrets.UPDATE_MANIFEST_TOKEN }}
       NPM_GITHUB_TOKEN: ${{'{'}}{ secrets.NPM_GITHUB_TOKEN }}
     with:
       ARTIFACTORY_REGISTRY: "naxgrp.jfrog.io"
