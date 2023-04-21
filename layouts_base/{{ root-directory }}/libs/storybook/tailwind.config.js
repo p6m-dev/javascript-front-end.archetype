@@ -4,11 +4,11 @@ const { join } = require('path');
 const content = [
   join(
     __dirname,
-    '{src,pages,components}/**/*!(*.stories|*.spec).{js,jsx,ts,tsx,html}'
+    '../design-system/{src,pages,components}/**/*!(*.stories|*.spec).{js,jsx,ts,tsx,html}'
   ),
   join(
     __dirname,
-    '../design-system/{src,pages,components}/**/*!(*.stories|*.spec).{js,jsx,ts,tsx,html}'
+    '../components/web/{src,pages,components}/**/*!(*.stories|*.spec).{js,jsx,ts,tsx,html}'
   ),
   ...createGlobPatternsForDependencies(__dirname),
 ];

@@ -1,2 +1,2 @@
 import './styles.css';
-import '@{{artifact-id}}/design-system';
+import '@{{package-name}}/design-system';

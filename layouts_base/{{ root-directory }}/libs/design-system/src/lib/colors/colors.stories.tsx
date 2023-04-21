@@ -1,14 +1,11 @@
-import React from 'react';
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import { Colors } from './colors';
 
-const Story: ComponentMeta<typeof Colors> = {
+export default {
   component: Colors,
   title: 'Design System/Colors',
-};
+} as Meta<typeof Colors>;
 
-export default Story;
+type Story = StoryObj<typeof Colors>;
 
-const Template: ComponentStory<typeof Colors> = (args) => <Colors {...args} />;
-
-export const Theems = Template.bind({});
+export const Themes: Story = {};

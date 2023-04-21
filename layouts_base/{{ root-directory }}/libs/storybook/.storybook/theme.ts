@@ -3,7 +3,7 @@ import { create } from '@storybook/theming';
 
 export default create({
   base: 'light',
-  brandTitle: 'NAX Components Library',
+  brandTitle: '{{artifact-id}} Components Library',
   brandUrl: 'https://nax.gitlab.io/ui/nax-component-library/',
   // brandImage,
   colorPrimary: '#e38302',
