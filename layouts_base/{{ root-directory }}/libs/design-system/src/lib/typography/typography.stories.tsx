@@ -1,13 +1,11 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import { Typography as Typo } from './typography';
 
-const Story: ComponentMeta<typeof Typo> = {
+export default {
   component: Typo,
   title: 'Design System/Text Styles',
-};
-export default Story;
+} as Meta<typeof Typo>;
 
-const Template: ComponentStory<typeof Typo> = (args) => <Typo {...args} />;
+type Story = StoryObj<typeof Typo>;
 
-export const Typography = Template.bind({});
-Typography.args = {};
+export const Typography: Story = {};

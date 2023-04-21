@@ -1,13 +1,11 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import { Spacing as Space } from './spacing';
 
-const Story: ComponentMeta<typeof Space> = {
+export default {
   component: Space,
   title: 'Design System/Spacing & Layout',
-};
-export default Story;
+} as Meta<typeof Space>;
 
-const Template: ComponentStory<typeof Space> = (args) => <Space {...args} />;
+type Story = StoryObj<typeof Space>;
 
-export const Spacing = Template.bind({});
-Spacing.args = {};
+export const Spacing: Story = {};

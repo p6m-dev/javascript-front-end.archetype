@@ -28,7 +28,8 @@
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
-        "@typescript-eslint/no-this-alias": ["off"]
+        "@typescript-eslint/no-this-alias": ["off"],
+        "react-hooks/exhaustive-deps": ["off"]
       }
     },
     {

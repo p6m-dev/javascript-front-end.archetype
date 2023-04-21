@@ -5,7 +5,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.renderFinalNewline": true,
+  "editor.renderFinalNewline": "on",
   "files.insertFinalNewline": true,
   "typescript.validate.enable": true,
   "eslint.validate": [
@@ -19,5 +19,8 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "stylelint.enable": true
+  "stylelint.enable": true,
+  "cSpell.words": [
+    "immer"
+  ]
 }

@@ -1,6 +1,6 @@
 /* eslint-disable no-self-compare */
 import { FC } from 'react';
-import { colors, modes, theems } from '../tokens/colors';
+import { colors, modes, themes } from '../tokens/colors';
 
 export interface ColorsProps {
   /**
@@ -42,7 +42,7 @@ const Palette: FC<PaletteProps> = ({ name }) => {
 export const Colors: React.FC<ColorsProps> = () => {
   return (
     <div>
-      {theems.map((theme) => (
+      {themes.map((theme) => (
         <div className={`theme-${theme}`}>
           {modes.map((mode) => {
             return (

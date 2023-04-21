@@ -1,6 +1,6 @@
 # storybook
 
-This library was generated with [Nx](https://nx.dev).
+This library was generated with NAX Tools.
 
 ## Running unit tests
 

@@ -1,1 +1,39 @@
-/* Sync typography */
+.typo-head-1 {
+  @apply font-head-1 text-head-1 font-head-1-weight leading-head-1 tracking-head-1;
+}
+
+.typo-head-2 {
+  @apply font-head-2 text-head-2 font-head-2-weight leading-head-2 tracking-head-2;
+}
+
+.typo-head-6 {
+  @apply font-head-6 text-head-6 font-head-6-weight leading-head-6 tracking-head-6;
+}
+
+.typo-head-4 {
+  @apply font-head-4 text-head-4 font-head-4-weight leading-head-4 tracking-head-4;
+}
+
+.typo-head-3 {
+  @apply font-head-3 text-head-3 font-head-3-weight leading-head-3 tracking-head-3;
+}
+
+.typo-head-5 {
+  @apply font-head-5 text-head-5 font-head-5-weight leading-head-5 tracking-head-5;
+}
+
+.typo-sm {
+  @apply font-sm text-sm font-sm-weight leading-sm tracking-sm;
+}
+
+.typo-xs {
+  @apply font-xs text-xs font-xs-weight leading-xs tracking-xs;
+}
+
+.typo-default {
+  @apply font-default text-default font-default-weight leading-default tracking-default;
+}
+
+.typo-caption {
+  @apply font-caption text-caption font-caption-weight leading-caption tracking-caption;
+}

@@ -1,9 +1,13 @@
-import type { StorybookViteConfig } from '@storybook/builder-vite';
+import type { StorybookConfig } from '@storybook/react-vite';
 
-export const rootMain: StorybookViteConfig = {
+export const rootMain: StorybookConfig = {
   stories: [],
-  addons: ['@storybook/addon-essentials'],
-  viteFinal: async (config) => {
-    return config;
+  addons: ['@storybook/addon-essentials', '@storybook/addon-mdx-gfm'],
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
+  },
+  docs: {
+    autodocs: true
   },
 };
