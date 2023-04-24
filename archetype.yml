@@ -135,15 +135,19 @@ script:
       directory:
         source: layouts_base
 
-  - if:
-      is-true: "{{ default-app != 'None' }}"
-      then:
-        - exec:
-            command: "pnpm"
-            args:
-              - "install"
-              - "--dir"
-              - "{{ root-directory }}"
+  - exec:
+      command: "pnpm"
+      args:
+        - "install"
+        - "--dir"
+        - "{{ root-directory }}"
+
+  - exec:
+      command: "pnpm"
+      args:
+        - "run"
+        - "update-nax"
+      cwd: "{{ root-directory }}"
 
   - if:
       is-true: "{{ default-app == 'React.js' }}"
