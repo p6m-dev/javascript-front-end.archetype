@@ -128,6 +128,7 @@ script:
 
   - set:
       root-directory:
+        prompt: "Front-end applications root directory:"
         default: "{{ project-prefix }}-{{ project-suffix }}"
 
   - render:
