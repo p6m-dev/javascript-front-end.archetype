@@ -105,7 +105,6 @@ script:
             - React.js
             - Next.js
             - React Native
-            - Expo
             - None
         default: None
 
@@ -174,5 +173,19 @@ script:
               - "generate"
               - "@nax-tech/next:application"
               - "website"
+              - "--no-interactive"
+            cwd: "{{ root-directory }}"
+
+  - if:
+      is-true: "{{ default-app == 'React Native' }}"
+      then:
+        - exec:
+            command: "pnpm"
+            args:
+              - "exec"
+              - "nx"
+              - "generate"
+              - "@nax-tech/react-native:application"
+              - "mobile"
               - "--no-interactive"
             cwd: "{{ root-directory }}"
