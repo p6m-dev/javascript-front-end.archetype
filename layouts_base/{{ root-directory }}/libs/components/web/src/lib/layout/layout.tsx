@@ -8,22 +8,32 @@ export interface LayoutProps extends DefaultProps {
   /**
    * Avatar image url for user menu icon
    */
-  avatar: string;
+  avatar?: string;
+  /**
+   * Profile menu item text content
+   */
+  menuProfile?: string;
+  /**
+   * Logout menu item text content
+   */
+  menuAuth?: string;
   /**
    * Logout callback
    * @returns void
    */
-  onLogout: () => void;
+  onAuth?: () => void;
   /**
    * On profile user menu click callback
    * @returns void
    */
-  onProfile: () => void;
+  onProfile?: () => void;
 }
 
 export const Layout: FC<LayoutProps> = ({
   avatar,
-  onLogout,
+  menuProfile,
+  menuAuth,
+  onAuth,
   onProfile,
   // Common default properties for each component
   className,
@@ -41,7 +51,13 @@ export const Layout: FC<LayoutProps> = ({
   const finalClasses = twMerge(baseClass, className);
   return (
     <div className="h-full flex flex-col">
-      <Header avatar={avatar} onProfile={onProfile} onLogout={onLogout} />
+      <Header
+        avatar={avatar}
+        menuProfile={menuProfile}
+        menuAuth={menuAuth}
+        onProfile={onProfile}
+        onAuth={onAuth}
+      />
       <main
         className={finalClasses}
         {...(testId ? { 'data-testid': testId } : {})}
@@ -51,7 +67,7 @@ export const Layout: FC<LayoutProps> = ({
         {children}
       </main>
       <Footer>Copyright</Footer>
-    </div>
+    </div> 
   );
 };
 

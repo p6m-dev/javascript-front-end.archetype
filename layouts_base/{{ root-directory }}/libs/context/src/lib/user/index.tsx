@@ -1,4 +1,11 @@
-import { createContext, FC, useMemo, useReducer, useEffect } from 'react';
+import {
+  createContext,
+  FC,
+  useMemo,
+  useReducer,
+  useEffect,
+  useContext,
+} from 'react';
 import produce from 'immer';
 import { GQLError } from '@nax-tech/clients-graphql';
 import { User } from '@{{package-name}}/models';
@@ -64,12 +71,15 @@ const reducer = (state: UserState, { type, payload }: DispatchProps) => {
   }
 };
 
-/**
- * HOC to provide a UserContext
- * @returns JSX.Element
- * @example export default compose(withUserProvider)(App);
- */
-export const withUserProvider = (Component: FC) => () => {
+interface UserProviderProps {
+  children: React.ReactNode;
+  isAuthenticated?: boolean;
+}
+
+export const UserProvider: FC<UserProviderProps> = ({
+  children,
+  isAuthenticated,
+}) => {
   const [userState, dispatch] = useReducer(reducer, initialState);
   const { user } = userState;
 
@@ -103,8 +113,12 @@ export const withUserProvider = (Component: FC) => () => {
   };
 
   useEffect(() => {
-    loadUser();
-  }, []);
+    if (isAuthenticated && !user) {
+      loadUser();
+    } else if (isAuthenticated === undefined) {
+      loadUser();
+    }
+  }, [isAuthenticated]);
 
   const providerValue = useMemo(
     () => ({
@@ -116,8 +130,21 @@ export const withUserProvider = (Component: FC) => () => {
 
   return (
     <UserContext.Provider value={providerValue}>
-      <Component />
+      {children}
     </UserContext.Provider>
+  );
+};
+
+/**
+ * HOC to provide a UserContext
+ * @returns JSX.Element
+ * @example export default compose(withUserProvider)(App);
+ */
+export const withUserProvider = (Component: FC) => () => {
+  return (
+    <UserProvider>
+      <Component />
+    </UserProvider>
   );
 };
 
@@ -147,6 +174,9 @@ export const withUser =
   };
 
 export default withUser;
+
+// Custom hook to access the user object
+export const useUser = () => useContext(UserContext);
 
 /**
  * HOC condition to return nested component when user was loaded

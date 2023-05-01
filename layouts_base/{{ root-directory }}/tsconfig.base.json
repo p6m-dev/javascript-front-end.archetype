@@ -19,6 +19,7 @@
       "@{{package-name}}/constants": ["libs/constants/src/index.ts"],
       "@{{package-name}}/context": ["libs/context/src/index.ts"],
       "@{{package-name}}/design-system": ["libs/design-system/src/index.ts"],
+      "@{{package-name}}/design-system/styles": ["libs/design-system/src/index.css"],
       "@{{package-name}}/features-web": ["libs/features/web/src/index.ts"],
       "@{{package-name}}/models": ["libs/models/src/index.ts"],
       "@{{package-name}}/services": ["libs/services/src/index.ts"]

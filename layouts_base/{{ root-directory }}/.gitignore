@@ -48,3 +48,5 @@ Thumbs.db
 .cache-loader/
 
 .nx-container
+
+.env.local
