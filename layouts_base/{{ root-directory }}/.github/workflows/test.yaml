@@ -8,5 +8,12 @@ on:
 jobs:
   test:
     uses: nax-platform/github-actions/.github/workflows/test-front-end.yaml@main
+    with:
+      REACT_APP_ENV: "dev"
     secrets:
       NPM_GITHUB_TOKEN: ${{'{'}}{ secrets.NPM_GITHUB_TOKEN }}
+      ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}
+      CONTENTFUL_ACCESS_TOKEN: ${{'{'}}{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+      CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{'{'}}{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
+      CONTENTFUL_SPACE_ID: ${{'{'}}{ secrets.CONTENTFUL_SPACE_ID }}
+      CONTENTFUL_ENVIRONMENT_ID: ${{'{'}}{ secrets.CONTENTFUL_ENVIRONMENT_ID }}
