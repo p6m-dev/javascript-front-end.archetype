@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 
 const server = setupServer(...mockUserHandlers);
 
-init('');
+init('https://mock.com/graphql');
 
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());

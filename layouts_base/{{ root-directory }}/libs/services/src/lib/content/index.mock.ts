@@ -29,4 +29,4 @@ export const mockGetContent = graphql.query('content', (_, res, ctx) => {
   );
 });
 
-export const handlers = [mockGetContents, mockGetContent];
+export const mockContentHandlers = [mockGetContents, mockGetContent];
