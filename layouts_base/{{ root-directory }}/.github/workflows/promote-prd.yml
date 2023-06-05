@@ -6,13 +6,13 @@ on:
         required: true
 
 name: 4. Promote Tag to Production
-run-name: Deploy ${{ inputs.tag }} to Production by @${{ github.triggering_actor }}
+run-name: Deploy ${{'{'}}{ inputs.tag }} to Production by @${{'{'}}{ github.triggering_actor }}
 jobs:
   promote:
     name: Promote Tag with Digest
     uses: nax-platform/github-actions/.github/workflows/promote-app-tag-with-digest.yaml@main
     with:
       target-env: prd
-      tag: ${{ inputs.tag }}
+      tag: ${{'{'}}{ inputs.tag }}
     secrets:
-      TOKEN: ${{ secrets.REPOSITORY_PUSH_TOKEN }}
+      TOKEN: ${{'{'}}{ secrets.REPOSITORY_PUSH_TOKEN }}
