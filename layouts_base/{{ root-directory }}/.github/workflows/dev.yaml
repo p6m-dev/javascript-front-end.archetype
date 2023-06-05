@@ -1,5 +1,3 @@
-name: DEV Environment Deployment
-
 on:
   push:
     branches:
@@ -7,6 +5,9 @@ on:
     paths-ignore:
       - "docs/**"
       - "README.md"
+
+name: 1. Dev Build & Deploy
+run-name: Dev Build & Deploy
 
 jobs:
   build_and_deploy:

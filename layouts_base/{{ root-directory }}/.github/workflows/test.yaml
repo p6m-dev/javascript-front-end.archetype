@@ -1,9 +1,10 @@
-name: Test
-
 on:
   pull_request:
     branches:
       - main
+
+name: 0. Test
+run-name: Test
 
 jobs:
   test:
@@ -12,7 +13,3 @@ jobs:
       REACT_APP_ENV: "dev"
     secrets:
       ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}
-      CONTENTFUL_ACCESS_TOKEN: ${{'{'}}{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-      CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{'{'}}{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
-      CONTENTFUL_SPACE_ID: ${{'{'}}{ secrets.CONTENTFUL_SPACE_ID }}
-      CONTENTFUL_ENVIRONMENT_ID: ${{'{'}}{ secrets.CONTENTFUL_ENVIRONMENT_ID }}
