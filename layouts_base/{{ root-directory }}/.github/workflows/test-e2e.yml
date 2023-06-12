@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        type: choice
+        description: Application
+        options: 
+        - ""
+
+name: "E2E: Testing"
+run-name: E2E Testing
+
+jobs:
+  tag_version:
+    name: Tag Version
+    uses: nax-platform/github-actions/.github/workflows/e2e-testing.yml@main
+    secrets:
+      ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}

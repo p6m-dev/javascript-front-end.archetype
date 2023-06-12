@@ -7,6 +7,7 @@ on:
 
 name: 3. Promote Tag to Stage
 run-name: Deploy ${{'{'}}{ inputs.tag }} to Stage by @${{'{'}}{ github.triggering_actor }}
+
 jobs:
   promote:
     name: Promote Tag with Digest
