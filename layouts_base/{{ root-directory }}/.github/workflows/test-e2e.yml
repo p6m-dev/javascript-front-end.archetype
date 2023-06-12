@@ -15,4 +15,4 @@ jobs:
     name: Tag Version
     uses: nax-platform/github-actions/.github/workflows/e2e-testing.yml@main
     secrets:
-      ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
+      ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}
