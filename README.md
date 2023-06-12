@@ -5,17 +5,17 @@ and render this template to your current working directory:
 ```bash
 archetect render git@github.com:nax-platform/javascript-front-end-archetype.git
 ```
-For information about interacting with the service, refer to the README at the generated
-project's root.
+For information about interacting with the service, refer to the README at the generated project's root.
 
 ## Prompts
 When rendering the archetype, you'll be prompted for the following values:
 
-| Property | Description | Example |
-|----------| ----------- | ------- |
-| `project`| General name that represents the project that is used to set the entity, service, and RPC stub names. | WaterColor
-| `aws-account-id`| AWS Sandbox environment account id  | 632133427543
-| `aws-bucket-name`| AWS Sandbox environment s3 bucket name for the Terraform back-end | ntg-lndz-tfstate-632133427543-123
+| Property | Description | Example | Default |
+|----------| ----------- | ------- | ------- |
+| `Org Prefix (JV Name)`| Joint venture name | naxa | 
+| `Org Suffix (JV Project)`| Project name  | watercolor | 
+| `Front-end application`| Create front-end application to get started | 4 | `4`
+| `Front-end applications root directory`| Front-end applications root directory | front-end-apps | `front-end-apps`
 
 For a list of all derived properties and examples of the property relationships, see [archetype.yml](./archetype.yml).
 

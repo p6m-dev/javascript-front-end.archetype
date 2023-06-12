@@ -25,14 +25,6 @@ script:
 
       org-suffix:
         prompt: "Org Suffix (JV Project):"
-
-      delivery-type:
-        prompt: "Delivery type: container or static"
-        type:
-          enum:
-            - container
-            - static
-        default: container
               
       prj-prefix:
         value: "front-end"
@@ -107,23 +99,6 @@ script:
             - React Native
             - None
         default: None
-
-  - if:
-      is-true: "{{ delivery-type == 'static' }}"
-      then:
-        - set:
-            aws-account-id:
-              prompt: "AWS Account ID:"
-
-            aws-bucket-name:
-              prompt: "AWS Terraform Back-End S3 Bucket Name:"
-      else:
-        - set:
-            aws-account-id:
-              value: "xxxxxxxxxx"
-
-            aws-bucket-name:
-              value: "xxxxxxxxx"
 
   - set:
       root-directory:
