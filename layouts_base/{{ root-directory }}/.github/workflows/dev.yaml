@@ -11,7 +11,7 @@ run-name: Dev Build & Deploy
 
 jobs:
   build_and_deploy:
-    uses: nax-platform/github-actions/.github/workflows/build-deploy-front-end-{{delivery-type}}.yaml@main
+    uses: nax-platform/github-actions/.github/workflows/build-deploy-front-end-container.yaml@main
     secrets:
       ARTIFACTORY_USERNAME: ${{'{'}}{ secrets.ARTIFACTORY_USERNAME }}
       ARTIFACTORY_IDENTITY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
@@ -24,5 +24,3 @@ jobs:
     with:
       REACT_APP_ENV: "dev"
       ARTIFACTORY_REGISTRY: "naxgrp.jfrog.io"
-      AWS_ACCOUNT_ID: "{{aws-account-id}}"
-      AWS_TFSTATE_BUCKET: "{{aws-bucket-name}}"
