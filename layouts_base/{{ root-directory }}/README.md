@@ -68,16 +68,16 @@ pnpm install
 ```
 &nbsp;
 
-## **Start local Web App**
+## **Start local app**
 ```bash
-pnpm nx serve portal
+pnpm nx serve <app_name>
 ```
 &nbsp;
 
 ## **Run Tests**
 #### Web App
 ```bash
-pnpm nx test portal
+pnpm nx test <app_name>
 ```
 #### Library
 ```bash
@@ -90,11 +90,6 @@ pnpm nx run-many --target=test --all
 &nbsp;
 ## Resources
 ### NAX Resources
-- [NAX Front-End Documentation](https://laughing-adventure-eyjorz3.pages.github.io)
-- [NAX Components Library Storybook](https://laughing-adventure-eyjorz3.pages.github.io/component-library/index.html)
+- [NAX Front-End Documentation](https://front-end.docs.platform.naxgrp.com)
+- [NAX Components Library Storybook](https://front-end.docs.platform.naxgrp.com/component-library/index.html)
 &nbsp;
-
-### Other Technologies
-- [Tailwind CSS](https://tailwindcss.com)
-- [Feature-Sliced Design](https://feature-sliced.design)
-- [NX Monorepo](https://nx.dev)
