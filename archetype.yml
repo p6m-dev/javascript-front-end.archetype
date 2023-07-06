@@ -164,3 +164,29 @@ script:
               - "mobile"
               - "--no-interactive"
             cwd: "{{ root-directory }}"
+  - exec:
+      command: "git"
+      args:
+        - "init"
+      cwd: "{{ root-directory }}"
+  - exec:
+      command: "git"
+      args:
+        - "add"
+        - "--all"
+      cwd: "{{ root-directory }}"
+  - exec:
+      command: "git"
+      args:
+        - "commit"
+        - "-m"
+        - "Project init"
+      cwd: "{{ root-directory }}"
+  - exec:
+      command: "git"
+      args:
+        - "remote"
+        - "add"
+        - "origin"
+        - "git@github.com:{{ org-prefix }}-{{ org-suffix }}/{{ root-directory }}.git"
+      cwd: "{{ root-directory }}"
