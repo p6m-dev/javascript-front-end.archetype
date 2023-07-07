@@ -68,7 +68,7 @@ export const UserForm: FC<Props> = ({
             name="firstName"
             control={control}
             defaultValue={object['firstName'] || ''}
-            rules={{ required: true }}
+            rules={{'{'}}{ required: true }}
             render={({ field }) => (
               <Input
                 {...field}
