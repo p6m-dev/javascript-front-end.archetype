@@ -18,6 +18,10 @@ export interface LayoutProps extends DefaultProps {
    */
   menuAuth?: string;
   /**
+   * Footer copyright content
+   */
+  footerCopy?: string;
+  /**
    * Logout callback
    * @returns void
    */
@@ -27,14 +31,21 @@ export interface LayoutProps extends DefaultProps {
    * @returns void
    */
   onProfile?: () => void;
+  /**
+   * On logo click callback
+   * @returns void
+   */
+  onHome?: () => void;
 }
 
 export const Layout: FC<LayoutProps> = ({
   avatar,
   menuProfile,
   menuAuth,
+  footerCopy,
   onAuth,
   onProfile,
+  onHome,
   // Common default properties for each component
   className,
   id,
@@ -57,6 +68,7 @@ export const Layout: FC<LayoutProps> = ({
         menuAuth={menuAuth}
         onProfile={onProfile}
         onAuth={onAuth}
+        onHome={onHome}
       />
       <main
         className={finalClasses}
@@ -66,8 +78,8 @@ export const Layout: FC<LayoutProps> = ({
       >
         {children}
       </main>
-      <Footer>Copyright</Footer>
-    </div> 
+      <Footer>{footerCopy}</Footer>
+    </div>
   );
 };
 

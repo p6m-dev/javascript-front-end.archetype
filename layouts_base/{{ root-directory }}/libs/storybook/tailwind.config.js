@@ -1,4 +1,4 @@
-const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
+const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
 
 const content = [
@@ -9,6 +9,10 @@ const content = [
   join(
     __dirname,
     '../components/web/{src,pages,components}/**/*!(*.stories|*.spec).{js,jsx,ts,tsx,html}'
+  ),
+  join(
+    __dirname,
+    '../../node_modules/@nax-tech/components-web/**/*!(*.stories|*.spec).{js,jsx,html}'
   ),
   ...createGlobPatternsForDependencies(__dirname),
 ];
@@ -25,6 +29,12 @@ module.exports = {
     },
     {
       pattern: /^text-/,
+    },
+    {
+      pattern: /^(m-|mb-|mt-|my-|mx-|ml-|mr-)/,
+    },
+    {
+      pattern: /^(p-|pb-|pt-|py-|px-|pl-|pr-)/,
     },
   ],
 };
