@@ -14,7 +14,7 @@ export const Footer: FC<FooterProps> = ({
 }) => {
   // Component base class names. Can be overridden by className property.
   const baseClass = cx({
-    'text-center': true,
+    'py-lg': true,
   });
 
   // Final class names
@@ -27,7 +27,7 @@ export const Footer: FC<FooterProps> = ({
       {...(id ? { id: id } : {})}
       {...(ariaLabel ? { 'aria-label': ariaLabel } : {})}
     >
-      {children}
+      <p className="typo-sm text-secondary-500 text-center">{children}</p>
     </footer>
   );
 };

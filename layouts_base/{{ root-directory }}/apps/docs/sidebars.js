@@ -15,8 +15,6 @@
 const sidebars = {
   docsSidebar: [
     'getting-started',
-    'storybook',
-    'design-system'
   ],
 };
 

@@ -7,7 +7,7 @@ import { User } from '@{{package-name}}/models';
 
 /**
  * Get a user by id
- * @param userId string
+ * @param id string
  * @param context: reference to the AbortController used to abort the call (optional)
  * @returns Promise<User>
  * @example const customer = await getCustomer(customerId);
@@ -21,7 +21,7 @@ export const getUser = async (
       query: `
       query user {
         user {
-          userId
+          id
           firstName
           lastName
         }
@@ -50,7 +50,7 @@ export const updateUser = async (
       query: `
       mutation updateUser($user: UserInput!) {
         updateUser(user: $user) {
-          userId
+          id
           firstName
           lastName
         }

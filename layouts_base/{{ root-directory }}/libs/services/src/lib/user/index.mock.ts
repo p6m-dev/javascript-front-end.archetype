@@ -2,7 +2,7 @@ import { graphql } from 'msw';
 import { User } from '@{{package-name}}/models';
 
 export const userMock: User = {
-  userId: '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d',
+  id: '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d',
   firstName: 'John',
   lastName: 'Doe',
 };

@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     ...rootMain.stories,
     '../../design-system/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../../components/web/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../../features/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-essentials',
