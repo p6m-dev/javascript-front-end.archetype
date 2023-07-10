@@ -18,6 +18,7 @@ const Component: FC<Props> = ({ userState: { user, updateUser } }) => {
         object={user}
         labels={{'{'}}{
           firstName: t('user_form.labels.firstName'),
+          lastName: t('user_form.labels.lastName'),
           submit: t('user_form.labels.submit'),
         }}
         placeholders={{'{'}}{ firstName: t('user_form.placeholders.firstName') }}
