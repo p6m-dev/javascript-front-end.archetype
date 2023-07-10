@@ -69,7 +69,7 @@
     "@docusaurus/module-type-aliases": "2.1.0",
     "@docusaurus/theme-classic": "^2.4.1",
     "@docusaurus/types": "^2.4.1",
-    "@nax-tech/design-system": "^0.21.0",
+    "@nax-tech/design-system": "^0.22.0",
     "@nax-tech/javascript": "^0.21.0",
     "@nax-tech/next": "^0.51.0",
     "@nax-tech/react": "^0.79.0",
