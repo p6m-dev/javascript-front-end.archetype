@@ -61,6 +61,7 @@ export const UserForm: FC<Props> = ({
   return (
     <form onSubmit={onSubmit} className="max-w-lg" data-testid={testId}>
       <h2 className="typo-head-3 mb-mega">{title}</h2>
+
       <div className="mb-lg">
         <label htmlFor="firstName">{labels['firstName']}</label>
         <div className="py-sm">
@@ -83,7 +84,29 @@ export const UserForm: FC<Props> = ({
         </div>
       </div>
 
-      {success && <p className="text-success-700 mb-lg">{successMessage}</p>}
+      <div className="mb-lg">
+        <label htmlFor="lastName">{labels['lastName']}</label>
+        <div className="py-sm">
+          <Controller
+            name="lastName"
+            control={control}
+            defaultValue={object['lastName'] || ''}
+            rules={{ required: true }}
+            render={({ field }) => (
+              <Input
+                {...field}
+                id="lastName"
+                placeholder={placeholders['lastName']}
+                disabled={isLoading}
+                defaultValue={(object['lastName'] as string) || ''}
+              />
+            )}
+          />
+          {errors.lastName && <p>{errorMessages['lastName']}</p>}
+        </div>
+      </div>
+
+      {success && <p className="text-green-700 mb-lg">{successMessage}</p>}
 
       {error && <p className="text-danger-700 mb-lg">{errorMessage}</p>}
 
