@@ -1,7 +1,10 @@
-# storybook
+# Storybook
 
-This library was generated with NAX Tools.
+https://storybook.js.org/
 
-## Running unit tests
+## Usage
 
-Run `nx test storybook` to execute the unit tests via [Vitest](https://vitest.dev/).
+Run Storybook:
+```bash
+pnpm run storybook
+```

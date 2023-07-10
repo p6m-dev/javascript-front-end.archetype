@@ -1,3 +1,3 @@
-# models
+# Project Data Models
 
-This library was generated with [Nx](https://nx.dev).
+See the documentation https://front-end.docs.platform.naxgrp.com/docs/templates/scaffolding

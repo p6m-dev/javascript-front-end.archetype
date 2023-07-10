@@ -1,7 +1,3 @@
-# services
+# Project Service Library
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test services` to execute the unit tests via [Jest](https://jestjs.io).
+See the documentation https://front-end.docs.platform.naxgrp.com/docs/templates/scaffolding
