@@ -20,16 +20,20 @@ export const Default: Story = {
     object: {
       id: '1',
       firstName: 'Joe',
+      lastName: 'Doe',
     },
     labels: {
       firstName: 'First Name',
+      lastName: 'Last Name',
       submit: 'Submit',
     },
     placeholders: {
       firstName: 'Enter your first name',
+      lastName: 'Enter your last name',
     },
     errorMessages: {
       firstName: 'First name is required',
+      lastName: 'Last name is required',
     },
     successMessage: 'Successfully updated',
     errorMessage: 'Something went wrong',
