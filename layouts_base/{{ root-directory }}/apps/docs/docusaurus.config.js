@@ -4,19 +4,19 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const title = 'naxa-watercolor';
+const title = '{{package-name}}';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title,
-  url: 'https://naxa-watercolor.pages.github.io/',
+  url: 'https://{{package-name}}.pages.github.io/',
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'naxa-watercolor', // Usually your GitHub org/user name.
-  projectName: 'naxa-watercolor', // Usually your repo name.
+  organizationName: '{{package-name}}', // Usually your GitHub org/user name.
+  projectName: '{{package-name}}', // Usually your repo name.
 
   presets: [
     [
@@ -26,8 +26,8 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/naxa-watercolor/naxa-watercolor/edit/main/apps/docs/',
+          // TODO: Please change this to your repo.
+          editUrl: 'https://github.com/{{package-name}}/{{root-directory}}/edit/main/apps/docs/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -47,7 +47,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/naxa-watercolor/naxa-watercolor',
+            href: 'https://github.com/{{package-name}}/{{root-directory}}',
             label: 'GitHub',
             position: 'right',
           },
