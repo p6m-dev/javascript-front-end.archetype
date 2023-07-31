@@ -24,15 +24,15 @@ jobs:
     name: Tag Version
     uses: nax-platform/github-actions/.github/workflows/test-e2e.yml@main
     secrets:
-      ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
-      ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
-      ARTIFACTORY_IDENTITY_TOKEN: ${{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
-      UPDATE_MANIFEST_TOKEN: ${{ secrets.UPDATE_MANIFEST_TOKEN }}
-      TESTRAIL_USERNAME: ${{ secrets.TESTRAIL_USERNAME }}
-      TESTRAIL_PASSWORD: ${{ secrets.TESTRAIL_PASSWORD }}
+      ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}
+      ARTIFACTORY_USERNAME: ${{'{'}}{ secrets.ARTIFACTORY_USERNAME }}
+      ARTIFACTORY_IDENTITY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
+      UPDATE_MANIFEST_TOKEN: ${{'{'}}{ secrets.UPDATE_MANIFEST_TOKEN }}
+      TESTRAIL_USERNAME: ${{'{'}}{ secrets.TESTRAIL_USERNAME }}
+      TESTRAIL_PASSWORD: ${{'{'}}{ secrets.TESTRAIL_PASSWORD }}
     with:
-      environment: ${{ inputs.environment }}
-      app: ${{ inputs.app }}
-      TESTRAIL_ENABLED: ${{ vars.TESTRAIL_ENABLED }}
-      TESTRAIL_INSTANCE_NAME: ${{ vars.TESTRAIL_INSTANCE_NAME }}
-      TESTRAIL_PROJECT_NAME: ${{ vars.TESTRAIL_PROJECT_NAME }}  
+      environment: ${{'{'}}{ inputs.environment }}
+      app: ${{'{'}}{ inputs.app }}
+      TESTRAIL_ENABLED: ${{'{'}}{ vars.TESTRAIL_ENABLED }}
+      TESTRAIL_INSTANCE_NAME: ${{'{'}}{ vars.TESTRAIL_INSTANCE_NAME }}
+      TESTRAIL_PROJECT_NAME: ${{'{'}}{ vars.TESTRAIL_PROJECT_NAME }}  
