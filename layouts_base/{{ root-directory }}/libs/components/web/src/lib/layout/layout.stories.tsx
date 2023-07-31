@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
 import { withDesign } from 'storybook-addon-designs';
 import { action } from '@storybook/addon-actions';
 import { Layout } from './layout';
+import type { StoryObj, Meta } from '@storybook/react';
 
 export default {
   component: Layout,

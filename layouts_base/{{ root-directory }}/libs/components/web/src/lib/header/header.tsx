@@ -6,8 +6,8 @@ import {
   Dropdown,
   DropdownMenuProps,
 } from '@nax-tech/components-web';
-import { Logo } from '@{{package-name}}/components-web';
 import { IconUserOutlined } from '@nax-tech/icons-web';
+import { Logo } from '@{{package-name}}/components-web';
 
 export interface HeaderProps extends DefaultProps {
   /**

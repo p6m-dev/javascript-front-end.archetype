@@ -1,9 +1,9 @@
+import { join } from 'path';
 import { defineConfig, UserConfig } from 'vite';
 import { InlineConfig } from 'vitest';
 import react from '@vitejs/plugin-react';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 import dts from 'vite-plugin-dts';
-import { join } from 'path';
 
 interface VitestConfigExport extends UserConfig {
   test: InlineConfig;

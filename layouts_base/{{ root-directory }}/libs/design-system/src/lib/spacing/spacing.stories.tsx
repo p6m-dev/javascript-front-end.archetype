@@ -1,5 +1,5 @@
-import type { StoryObj, Meta } from '@storybook/react';
 import { Spacing as Space } from './spacing';
+import type { StoryObj, Meta } from '@storybook/react';
 
 export default {
   component: Space,

@@ -1,7 +1,7 @@
 import { setupServer } from 'msw/node';
 import { init } from '@nax-tech/clients-graphql';
-import { getUser, updateUser } from './';
 import { userMock, mockUserHandlers } from './index.mock';
+import { getUser, updateUser } from './';
 import '@testing-library/jest-dom';
 
 const server = setupServer(...mockUserHandlers);

@@ -1,6 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react';
 import { withDesign } from 'storybook-addon-designs';
 import { Footer } from './footer';
+import type { StoryObj, Meta } from '@storybook/react';
 
 export default {
   component: Footer,

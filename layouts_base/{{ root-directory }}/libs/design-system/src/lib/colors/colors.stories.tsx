@@ -1,5 +1,5 @@
-import type { StoryObj, Meta } from '@storybook/react';
 import { Colors } from './colors';
+import type { StoryObj, Meta } from '@storybook/react';
 
 export default {
   component: Colors,
