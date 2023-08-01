@@ -14,7 +14,7 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/libs/features/profile"],
+      "outputs": ["{workspaceRoot}/coverage/libs/features/profile"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/libs/features/profile"

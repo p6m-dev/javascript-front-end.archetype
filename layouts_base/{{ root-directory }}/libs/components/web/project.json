@@ -14,7 +14,7 @@
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/components/web"],
+      "outputs": ["{workspaceRoot}/coverage/libs/components/web"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/libs/components/web"

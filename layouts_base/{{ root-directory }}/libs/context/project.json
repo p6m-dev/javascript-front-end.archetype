@@ -14,7 +14,7 @@
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/context"],
+      "outputs": ["{workspaceRoot}/coverage/libs/context"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/libs/context"
