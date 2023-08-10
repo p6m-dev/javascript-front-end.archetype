@@ -1,23 +1,14 @@
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        description: 'environment'
-        required: true
-        default: 'dev'
-        type: choice
-        options:
-          - dev
-          - staging
-          - prod
       app:
         type: choice
         description: Application
-        options: 
-        - ""
+        options:
+          - ''
 
-name: "E2E: Testing"
-run-name: E2E Testing
+name: 'E2E: Regresstion testing'
+run-name: E2E Regresstion testing
 
 jobs:
   tag_version:
@@ -31,8 +22,8 @@ jobs:
       TESTRAIL_USERNAME: ${{'{'}}{ secrets.TESTRAIL_USERNAME }}
       TESTRAIL_PASSWORD: ${{'{'}}{ secrets.TESTRAIL_PASSWORD }}
     with:
-      environment: ${{'{'}}{ inputs.environment }}
+      environment: 'staging'
       app: ${{'{'}}{ inputs.app }}
       TESTRAIL_ENABLED: ${{'{'}}{ vars.TESTRAIL_ENABLED }}
       TESTRAIL_INSTANCE_NAME: ${{'{'}}{ vars.TESTRAIL_INSTANCE_NAME }}
-      TESTRAIL_PROJECT_NAME: ${{'{'}}{ vars.TESTRAIL_PROJECT_NAME }}  
+      TESTRAIL_PROJECT_NAME: ${{'{'}}{ vars.TESTRAIL_PROJECT_NAME }}
