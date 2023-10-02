@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge';
 import {
   DefaultProps,
   Dropdown,
-  DropdownMenuProps,
+  DropdownProps,
 } from '@nax-tech/components-web';
 import { IconUserOutlined } from '@nax-tech/icons-web';
 import { Logo } from '@{{package-name}}/components-web';
@@ -59,7 +59,7 @@ export const Header: FC<HeaderProps> = ({
   // Final class names
   const finalClasses = twMerge(baseClass, className);
 
-  const items: DropdownMenuProps['items'] = [];
+  const items: DropdownProps['items'] = [];
 
   if (onProfile) {
     items.push({
