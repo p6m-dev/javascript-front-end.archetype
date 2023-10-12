@@ -1,39 +1,311 @@
-.typo-head-1 {
-  @apply font-head-1 text-head-1 font-head-1-weight leading-head-1 tracking-head-1;
+/* Large Fonts */
+
+.typo-l-large-title-bold {
+  @apply text-[120px];
+  @apply leading-[176px];
+  @apply font-bold;
+  @apply font-sans;
 }
 
-.typo-head-2 {
-  @apply font-head-2 text-head-2 font-head-2-weight leading-head-2 tracking-head-2;
+.typo-l-large-title-regular {
+  @apply text-[120px];
+  @apply leading-[176px];
+  @apply font-normal;
+  @apply font-sans;
 }
 
-.typo-head-6 {
-  @apply font-head-6 text-head-6 font-head-6-weight leading-head-6 tracking-head-6;
+.typo-l-title-1-bold {
+  @apply text-[80px];
+  @apply leading-[96px];
+  @apply font-bold;
+  @apply font-sans;
 }
 
-.typo-head-4 {
-  @apply font-head-4 text-head-4 font-head-4-weight leading-head-4 tracking-head-4;
+.typo-l-title-1-regular {
+  @apply text-[80px];
+  @apply leading-[96px];
+  @apply font-normal;
+  @apply font-sans;
 }
 
-.typo-head-3 {
-  @apply font-head-3 text-head-3 font-head-3-weight leading-head-3 tracking-head-3;
+.typo-l-title-2-bold {
+  @apply text-[64px];
+  @apply leading-[64px];
+  @apply font-bold;
+  @apply font-sans;
 }
 
-.typo-head-5 {
-  @apply font-head-5 text-head-5 font-head-5-weight leading-head-5 tracking-head-5;
+.typo-l-title-2-regular {
+  @apply text-[64px];
+  @apply leading-[64px];
+  @apply font-normal;
+  @apply font-sans;
 }
 
-.typo-sm {
-  @apply font-sm text-sm font-sm-weight leading-sm tracking-sm;
+.typo-l-title-3-bold {
+  @apply text-[56px];
+  @apply leading-[64px];
+  @apply font-bold;
+  @apply font-sans;
 }
 
-.typo-xs {
-  @apply font-xs text-xs font-xs-weight leading-xs tracking-xs;
+.typo-l-title-3-regular {
+  @apply text-[56px];
+  @apply leading-[64px];
+  @apply font-normal;
+  @apply font-sans;
 }
 
-.typo-default {
-  @apply font-default text-default font-default-weight leading-default tracking-default;
+.typo-l-title-4-bold {
+  @apply text-[48px];
+  @apply leading-[56px];
+  @apply font-bold;
+  @apply font-sans;
 }
 
-.typo-caption {
-  @apply font-caption text-caption font-caption-weight leading-caption tracking-caption;
+.typo-l-title-4-regular {
+  @apply text-[48px];
+  @apply leading-[56px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-title-5-bold {
+  @apply text-[40px];
+  @apply leading-[48px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-title-5-regular {
+  @apply text-[40px];
+  @apply leading-[48px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-subhead-1-bold {
+  @apply text-[32px];
+  @apply leading-[40px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-subhead-1-regular {
+  @apply text-[32px];
+  @apply leading-[40px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-subhead-2-bold {
+  @apply text-[24px];
+  @apply leading-[32px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-subhead-2-regular {
+  @apply text-[24px];
+  @apply leading-[32px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-body-bold {
+  @apply text-[16px];
+  @apply leading-[24px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-body-regular {
+  @apply text-[16px];
+  @apply leading-[24px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-footnote-bold {
+  @apply text-[14px];
+  @apply leading-[16px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-footnote-regular {
+  @apply text-[14px];
+  @apply leading-[16px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-caption-bold {
+  @apply text-[12px];
+  @apply leading-[16px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-caption-regular {
+  @apply text-[12px];
+  @apply leading-[16px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+/* Small Fonts */
+
+.typo-s-large-title-bold {
+  @apply text-[48px];
+  @apply leading-[64px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-large-title-regular {
+  @apply text-[48px];
+  @apply leading-[64px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-1-bold {
+  @apply text-[44px];
+  @apply leading-[56px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-1-regular {
+  @apply text-[44px];
+  @apply leading-[56px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-2-bold {
+  @apply text-[40px];
+  @apply leading-[48px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-2-regular {
+  @apply text-[40px];
+  @apply leading-[48px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-3-bold {
+  @apply text-[36px];
+  @apply leading-[40px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-3-regular {
+  @apply text-[36px];
+  @apply leading-[40px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-4-bold {
+  @apply text-[32px];
+  @apply leading-[40px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-4-regular {
+  @apply text-[32px];
+  @apply leading-[40px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-5-bold {
+  @apply text-[24px];
+  @apply leading-[32px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-5-regular {
+  @apply text-[24px];
+  @apply leading-[32px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-subtitle-1-bold {
+  @apply text-[20px];
+  @apply leading-[24px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-subtitle-1-regular {
+  @apply text-[20px];
+  @apply leading-[24px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-subtitle-2-bold {
+  @apply text-[18px];
+  @apply leading-[24px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-subtitle-2-regular {
+  @apply text-[18px];
+  @apply leading-[24px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-body-bold {
+  @apply text-[16px];
+  @apply leading-[24px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-body-regular {
+  @apply text-[16px];
+  @apply leading-[24px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-footnote-bold {
+  @apply text-[12px];
+  @apply leading-[16px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-footnote-regular {
+  @apply text-[12px];
+  @apply leading-[16px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-caption-bold {
+  @apply text-[10px];
+  @apply leading-[16px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-caption-regular {
+  @apply text-[10px];
+  @apply leading-[16px];
+  @apply font-normal;
+  @apply font-sans;
 }

@@ -25,6 +25,32 @@ export const colors = {
     900: 'var(--color-secondary-900)',
   },
 
+  'accent-01': {
+    50: 'var(--color-accent-01-50)',
+    100: 'var(--color-accent-01-100)',
+    200: 'var(--color-accent-01-200)',
+    300: 'var(--color-accent-01-300)',
+    400: 'var(--color-accent-01-400)',
+    500: 'var(--color-accent-01-500)',
+    600: 'var(--color-accent-01-600)',
+    700: 'var(--color-accent-01-700)',
+    800: 'var(--color-accent-01-800)',
+    900: 'var(--color-accent-01-900)',  
+  },
+
+  neutral: {
+    50: 'var(--color-neutral-50)',
+    100: 'var(--color-neutral-100)',
+    200: 'var(--color-neutral-200)',
+    300: 'var(--color-neutral-300)',
+    400: 'var(--color-neutral-400)',
+    500: 'var(--color-neutral-500)',
+    600: 'var(--color-neutral-600)',
+    700: 'var(--color-neutral-700)',
+    800: 'var(--color-neutral-800)',
+    900: 'var(--color-neutral-900)',  
+  },
+
   success: {
     50: 'var(--color-success-50)',
     100: 'var(--color-success-100)',
@@ -51,17 +77,17 @@ export const colors = {
     900: 'var(--color-warning-900)',
   },
 
-  danger: {
-    50: 'var(--color-danger-50)',
-    100: 'var(--color-danger-100)',
-    200: 'var(--color-danger-200)',
-    300: 'var(--color-danger-300)',
-    400: 'var(--color-danger-400)',
-    500: 'var(--color-danger-500)',
-    600: 'var(--color-danger-600)',
-    700: 'var(--color-danger-700)',
-    800: 'var(--color-danger-800)',
-    900: 'var(--color-danger-900)',
+  error: {
+    50: 'var(--color-error-50)',
+    100: 'var(--color-error-100)',
+    200: 'var(--color-error-200)',
+    300: 'var(--color-error-300)',
+    400: 'var(--color-error-400)',
+    500: 'var(--color-error-500)',
+    600: 'var(--color-error-600)',
+    700: 'var(--color-error-700)',
+    800: 'var(--color-error-800)',
+    900: 'var(--color-error-900)',
   },
 };
 
