@@ -112,42 +112,42 @@
   @apply font-sans;
 }
 
-.typo-body-bold {
+.typo-l-body-bold {
   @apply text-[16px];
   @apply leading-[24px];
   @apply font-bold;
   @apply font-sans;
 }
 
-.typo-body-regular {
+.typo-l-body-regular {
   @apply text-[16px];
   @apply leading-[24px];
   @apply font-normal;
   @apply font-sans;
 }
 
-.typo-footnote-bold {
+.typo-l-footnote-bold {
   @apply text-[14px];
   @apply leading-[16px];
   @apply font-bold;
   @apply font-sans;
 }
 
-.typo-footnote-regular {
+.typo-l-footnote-regular {
   @apply text-[14px];
   @apply leading-[16px];
   @apply font-normal;
   @apply font-sans;
 }
 
-.typo-caption-bold {
+.typo-l-caption-bold {
   @apply text-[12px];
   @apply leading-[16px];
   @apply font-bold;
   @apply font-sans;
 }
 
-.typo-caption-regular {
+.typo-l-caption-regular {
   @apply text-[12px];
   @apply leading-[16px];
   @apply font-normal;
@@ -268,42 +268,42 @@
   @apply font-sans;
 }
 
-.typo-body-bold {
+.typo-s-body-bold {
   @apply text-[16px];
   @apply leading-[24px];
   @apply font-bold;
   @apply font-sans;
 }
 
-.typo-body-regular {
+.typo-s-body-regular {
   @apply text-[16px];
   @apply leading-[24px];
   @apply font-normal;
   @apply font-sans;
 }
 
-.typo-footnote-bold {
+.typo-s-footnote-bold {
   @apply text-[12px];
   @apply leading-[16px];
   @apply font-bold;
   @apply font-sans;
 }
 
-.typo-footnote-regular {
+.typo-s-footnote-regular {
   @apply text-[12px];
   @apply leading-[16px];
   @apply font-normal;
   @apply font-sans;
 }
 
-.typo-caption-bold {
+.typo-s-caption-bold {
   @apply text-[10px];
   @apply leading-[16px];
   @apply font-bold;
   @apply font-sans;
 }
 
-.typo-caption-regular {
+.typo-s-caption-regular {
   @apply text-[10px];
   @apply leading-[16px];
   @apply font-normal;

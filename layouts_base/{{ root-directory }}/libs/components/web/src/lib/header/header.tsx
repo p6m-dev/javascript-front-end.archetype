@@ -53,7 +53,7 @@ export const Header: FC<HeaderProps> = ({
 }) => {
   // Component base class names. Can be overridden by className property.
   const baseClass = cx({
-    'bg-secondary-900 px-mega py-default items-center': true,
+    'bg-neutral-900 px-2xl py-2xs items-center': true,
   });
 
   // Final class names
@@ -101,11 +101,11 @@ export const Header: FC<HeaderProps> = ({
 
         {(onAuth || onProfile) && (
           <Dropdown items={items}>
-            <div className="text-white bg-secondary-700 hover:bg-secondary-800 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer">
+            <div className="text-white bg-neutral-700 hover:bg-neutral-800 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer">
               {avatar ? (
                 <span data-testid="header-avatar">{avatar}</span>
               ) : (
-                <IconUserOutlined className="w-4 h-4 fill-secondary-400" />
+                <IconUserOutlined className="w-4 h-4 fill-neutral-400" />
               )}
             </div>
           </Dropdown>

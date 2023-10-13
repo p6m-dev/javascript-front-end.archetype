@@ -27,7 +27,9 @@ export const Footer: FC<FooterProps> = ({
       {...(id ? { id: id } : {})}
       {...(ariaLabel ? { 'aria-label': ariaLabel } : {})}
     >
-      <p className="typo-sm text-secondary-500 text-center">{children}</p>
+      <p className="typo-l-footnote-regular text-neutral-500 text-center">
+        {children}
+      </p>
     </footer>
   );
 };
