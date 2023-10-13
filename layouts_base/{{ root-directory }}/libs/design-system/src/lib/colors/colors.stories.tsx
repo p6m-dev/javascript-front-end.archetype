@@ -8,4 +8,4 @@ export default {
 
 type Story = StoryObj<typeof Colors>;
 
-export const Themes: Story = {};
+export const ColorPalette: Story = {};
