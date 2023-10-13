@@ -14,7 +14,7 @@ export const Footer: FC<FooterProps> = ({
 }) => {
   // Component base class names. Can be overridden by className property.
   const baseClass = cx({
-    'py-lg': true,
+    'py-s': true,
   });
 
   // Final class names
