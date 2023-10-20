@@ -3,8 +3,7 @@ import cx from 'classnames';
 import { twMerge } from 'tailwind-merge';
 import {
   DefaultProps,
-  Dropdown,
-  DropdownProps,
+  DropdownMenu,
 } from '@nax-tech/components-web';
 import { IconUserOutlined } from '@nax-tech/icons-web';
 import { Logo } from '@{{package-name}}/components-web';
@@ -59,7 +58,7 @@ export const Header: FC<HeaderProps> = ({
   // Final class names
   const finalClasses = twMerge(baseClass, className);
 
-  const items: DropdownProps['items'] = [];
+  const items = [];
 
   if (onProfile) {
     items.push({
@@ -100,7 +99,7 @@ export const Header: FC<HeaderProps> = ({
         </div>
 
         {(onAuth || onProfile) && (
-          <Dropdown items={items}>
+          <DropdownMenu items={items}>
             <div className="text-white bg-neutral-700 hover:bg-neutral-800 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer">
               {avatar ? (
                 <span data-testid="header-avatar">{avatar}</span>
@@ -108,7 +107,7 @@ export const Header: FC<HeaderProps> = ({
                 <IconUserOutlined className="w-4 h-4 fill-neutral-400" />
               )}
             </div>
-          </Dropdown>
+          </DropdownMenu>
         )}
       </div>
     </header>
