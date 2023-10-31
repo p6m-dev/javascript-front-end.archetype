@@ -1,10 +1,7 @@
 import { FC } from 'react';
 import cx from 'classnames';
 import { twMerge } from 'tailwind-merge';
-import {
-  DefaultProps,
-  DropdownMenu,
-} from '@nax-tech/components-web';
+import { DefaultProps, DropdownMenu } from '@nax-tech/components-web';
 import { IconUserOutlined } from '@nax-tech/icons-web';
 import { Logo } from '@{{package-name}}/components-web';
 

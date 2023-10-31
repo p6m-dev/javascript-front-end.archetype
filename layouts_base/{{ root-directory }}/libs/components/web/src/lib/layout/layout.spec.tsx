@@ -8,7 +8,6 @@ const propId = 'some-id';
 const propTestId = 'some-testid';
 const propAriaLabel = 'some-aria-label';
 const propChildren = 'Content';
-const propT = 'some-i18n-key';
 // Custom props
 const propAvatar = 'A';
 const propOnLogout = vitest.fn();
@@ -21,7 +20,7 @@ describe('Layout', () => {
       <Layout
         avatar={propAvatar}
         onProfile={propOnProfile}
-        onLogout={propOnLogout}
+        onAuth={propOnLogout}
         testId={propTestId}
       >
         {propChildren}
@@ -39,7 +38,7 @@ describe('Layout', () => {
       <Layout
         avatar={propAvatar}
         onProfile={propOnProfile}
-        onLogout={propOnLogout}
+        onAuth={propOnLogout}
         testId={propTestId}
         className={propClassName}
       >
@@ -54,7 +53,7 @@ describe('Layout', () => {
       <Layout
         avatar={propAvatar}
         onProfile={propOnProfile}
-        onLogout={propOnLogout}
+        onAuth={propOnLogout}
         testId={propTestId}
         id={propId}
       >
@@ -69,7 +68,7 @@ describe('Layout', () => {
       <Layout
         avatar={propAvatar}
         onProfile={propOnProfile}
-        onLogout={propOnLogout}
+        onAuth={propOnLogout}
         testId={propTestId}
         ariaLabel={propAriaLabel}
       >
