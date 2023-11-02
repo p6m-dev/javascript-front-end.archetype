@@ -22,10 +22,12 @@ script:
   - set:
       org-prefix:
         prompt: "Org Prefix (JV Name):"
+        default: "org-prefix"
 
       org-suffix:
         prompt: "Org Suffix (JV Project):"
-              
+        default: "org-suffix"
+
       prj-prefix:
         value: "front-end"
 
