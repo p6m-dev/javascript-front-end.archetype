@@ -8,7 +8,6 @@
     "start": {
       "executor": "@nx/storybook:storybook",
       "options": {
-        "uiFramework": "@storybook/react",
         "port": 4400,
         "configDir": "libs/storybook/.storybook"
       },
@@ -22,7 +21,6 @@
       "executor": "@nx/storybook:build",
       "outputs": ["{options.outputDir}"],
       "options": {
-        "uiFramework": "@storybook/react",
         "configDir": "libs/storybook/.storybook",
         "outputDir": "dist/storybook/storybook"
       },
