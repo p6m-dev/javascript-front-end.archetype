@@ -1,12 +1,11 @@
 import { action } from '@storybook/addon-actions';
-import { withDesign } from 'storybook-addon-designs';
-import { UserForm } from './user';
 import type { StoryObj, Meta } from '@storybook/react';
+import { UserForm } from './user';
 
 export default {
   component: UserForm,
   title: 'Features/User/Form',
-  decorators: [withDesign, (ComponentStory) => ComponentStory()],
+  decorators: [(ComponentStory) => ComponentStory()],
   parameters: {
     zeplinLink: '',
   },

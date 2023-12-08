@@ -1,7 +1,6 @@
 import { action } from '@storybook/addon-actions';
-import { withDesign } from 'storybook-addon-designs';
-import { Logo } from './logo';
 import type { StoryObj, Meta } from '@storybook/react';
+import { Logo } from './logo';
 
 export default {
   component: Logo,
@@ -38,7 +37,7 @@ export default {
       },
     },
   },
-  decorators: [withDesign, (ComponentStory) => ComponentStory()],
+  decorators: [(ComponentStory) => ComponentStory()],
   parameters: {
     zeplinLink: '',
   },
