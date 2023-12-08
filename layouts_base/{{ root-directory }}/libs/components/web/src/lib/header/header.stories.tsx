@@ -1,7 +1,6 @@
 import { action } from '@storybook/addon-actions';
-import { withDesign } from 'storybook-addon-designs';
-import { Header } from './header';
 import type { StoryObj, Meta } from '@storybook/react';
+import { Header } from './header';
 
 export default {
   component: Header,
@@ -53,7 +52,7 @@ export default {
       },
     },
   },
-  decorators: [withDesign, (ComponentStory) => ComponentStory()],
+  decorators: [(ComponentStory) => ComponentStory()],
   parameters: {
     zeplinLink: '',
   },

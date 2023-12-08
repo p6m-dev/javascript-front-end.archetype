@@ -1,7 +1,6 @@
-import { withDesign } from 'storybook-addon-designs';
 import { action } from '@storybook/addon-actions';
-import { Layout } from './layout';
 import type { StoryObj, Meta } from '@storybook/react';
+import { Layout } from './layout';
 
 export default {
   component: Layout,
@@ -38,7 +37,7 @@ export default {
       },
     },
   },
-  decorators: [withDesign, (ComponentStory) => ComponentStory()],
+  decorators: [(ComponentStory) => ComponentStory()],
   parameters: {
     zeplinLink: '',
   },

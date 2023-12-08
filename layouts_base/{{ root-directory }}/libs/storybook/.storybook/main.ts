@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
+import viteTsConfigPaths from 'vite-tsconfig-paths';
 import { rootMain } from '../../../.storybook/main';
 import type { StorybookConfig } from '@storybook/react-vite';
-import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 const config: StorybookConfig = {
   ...rootMain,
@@ -27,9 +27,6 @@ const config: StorybookConfig = {
       })
     );
     return config;
-  },
-  typescript: {
-    reactDocgen: 'react-docgen',
   },
 };
 

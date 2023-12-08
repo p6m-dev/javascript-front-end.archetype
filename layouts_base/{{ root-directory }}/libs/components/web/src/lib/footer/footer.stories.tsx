@@ -1,6 +1,5 @@
-import { withDesign } from 'storybook-addon-designs';
-import { Footer } from './footer';
 import type { StoryObj, Meta } from '@storybook/react';
+import { Footer } from './footer';
 
 export default {
   component: Footer,
@@ -48,7 +47,7 @@ export default {
       },
     },
   },
-  decorators: [withDesign, (ComponentStory) => ComponentStory()],
+  decorators: [(ComponentStory) => ComponentStory()],
   parameters: {
     zeplinLink: '',
   },
