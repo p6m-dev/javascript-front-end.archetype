@@ -1,25 +1,26 @@
 name: Lint-Build-Test
 
 on:
-  push:
-    branches:
-      - "**"
+  pull_request:
+    types: [closed]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
+  NODE_OPTIONS: --max_old_space_size=4096
 
 jobs:
   lint-build-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout  
         uses: actions/checkout@v2
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-        env:
-          # TODO: add to secrets
-          ARTIFACTORY_TOKEN: ""
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
