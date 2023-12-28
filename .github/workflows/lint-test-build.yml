@@ -2,7 +2,8 @@ name: Lint-Build-Test
 
 on:
   pull_request:
-    types: [closed]
+    branches:
+      - main
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
