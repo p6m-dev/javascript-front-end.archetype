@@ -63,7 +63,6 @@ type Story = StoryObj<typeof Header>;
 export const Default: Story = {
   args: {
     avatar: 'A',
-    onLogout: action('Header > onLogout'),
     onProfile: action('Header > onProfile'),
   },
 };
