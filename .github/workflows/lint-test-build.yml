@@ -62,7 +62,6 @@ jobs:
           pnpm exec nx generate @nax-tech/react:form --name=form1 --fields=firstName --project=components-web --no-interactive
           pnpm exec nx generate @nax-tech/react:integrate-graphql --devUrl=devUrl --project=ra --no-interactive
           pnpm exec nx generate @nax-tech/react:integrate-pwa --project=ra --no-interactive
-          pnpm install
           pnpm exec nx generate @nax-tech/react:integrate-auth --audience=audience --clientId=clientId --domain=domain --project=ra --no-interactive
           pnpm exec nx generate @nax-tech/react:integrate-gtm --id=tagId --project=ra --no-interactive
           pnpm add react-gtm-module @types/react-gtm-module
