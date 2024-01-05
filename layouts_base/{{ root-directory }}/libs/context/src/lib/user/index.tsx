@@ -6,7 +6,7 @@ import {
   useEffect,
   useContext,
 } from 'react';
-import produce from 'immer';
+import { produce } from 'immer';
 import { GQLError } from '@nax-tech/clients-graphql';
 import { User } from '@{{package-name}}/models';
 import {
