@@ -50,6 +50,26 @@ jobs:
       - name: archetect render
         run: archetect render ${{ github.workspace }}
 
+      - name: generate react app
+        run: |
+          cd front-end-apps
+          pnpm update-nax
+          pnpm exec nx generate @nax-tech/react:application --name=ra --no-interactive
+          pnpm exec nx generate @nax-tech/react:component --name=component1 --project=components-web --no-interactive
+          pnpm exec nx generate @nax-tech/react:library --name=library1 --importPath=path --no-interactive
+          pnpm exec nx generate @nax-tech/react:context --name=context1 --project=context --no-interactive
+          pnpm exec nx generate @nax-tech/react:service --name=service1 --project=services --no-interactive
+          pnpm exec nx generate @nax-tech/react:form --name=form1 --fields=firstName --project=components-web --no-interactive
+          pnpm exec nx generate @nax-tech/react:integrate-graphql --devUrl=devUrl --project=ra --no-interactive
+          pnpm exec nx generate @nax-tech/react:integrate-pwa --project=ra --no-interactive
+          pnpm install
+          pnpm exec nx generate @nax-tech/react:integrate-auth --audience=audience --clientId=clientId --domain=domain --project=ra --no-interactive
+          pnpm exec nx generate @nax-tech/react:integrate-gtm --id=tagId --project=ra --no-interactive
+          pnpm add react-gtm-module @types/react-gtm-module
+          pnpm exec nx generate @nax-tech/react:integrate-flags --devClientSideId=id --project=ra --no-interactive
+          pnpm add @nax-tech/feature-flags-react
+          pnpm exec nx generate @nax-tech/react:integrate-logger --devApiKey=apiKey --devUrl=url --project=ra --no-interactive
+
       - name: generate next app
         run: |
           cd front-end-apps
@@ -57,32 +77,6 @@ jobs:
           pnpm exec nx generate @nax-tech/next:service-content --contentType=wwww --project=next --no-interactive
           pnpm exec nx generate @nax-tech/next:integrate-gtm --id=q111 --project=next --no-interactive
           pnpm exec nx generate @nax-tech/next:integrate-logger --devApiKey=key --devUrl=url --project=next --no-interactive
-
-        # skip this for now
-        # pnpm exec nx generate @nax-tech/next:integrate-flags --devClientSideId=devClientSideId --project=nextapp --no-interactive
-        # - not working for Next? (The integration is only applicable to Next.js applications)
-
-        # skip this for now
-        # Is this Application?? pnpm exec nx generate @nax-tech/next:cms --name=websitecms --no-interactive
-
-      - name: generate react app
-        run: |
-          cd front-end-apps
-          pnpm update-nax
-          pnpm exec nx generate @nax-tech/react:application --name=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:form --name=form1 --fields=firstName --project=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:library --name=library1 --importPath=path --no-interactive
-          pnpm exec nx generate @nax-tech/react:component --name=component1 --project=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:context --name=context1 --project=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:integrate-graphql --devUrl=devUrl --project=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:integrate-auth --audience=audience --clientId=clientId --domain=domain --project=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:integrate-pwa --project=ra --no-interactive
-          pnpm add workbox-core workbox-expiration workbox-precaching workbox-routing workbox-strategies
-          pnpm exec nx generate @nax-tech/react:integrate-gtm --id=tagId --project=ra --no-interactive
-          pnpm add react-gtm-module @types/react-gtm-module
-          pnpm exec nx generate @nax-tech/react:integrate-flags --devClientSideId=id --project=ra --no-interactive
-          pnpm add @nax-tech/feature-flags-react
-          pnpm exec nx generate @nax-tech/react:integrate-logger --devApiKey=apiKey --devUrl=url --project=ra --no-interactive
 
       - name: ls fodler
         run: |
