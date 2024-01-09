@@ -17,7 +17,6 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: '{{package-name}}', // Usually your GitHub org/user name.
   projectName: '{{package-name}}', // Usually your repo name.
-
   presets: [
     [
       'classic',
@@ -35,7 +34,9 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [[require.resolve("docusaurus-lunr-search"), {
+    enableHighlight: true
+  }]],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

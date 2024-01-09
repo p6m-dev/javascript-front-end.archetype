@@ -2,7 +2,7 @@
 
 ## **Getting Started**
 1. Prerequisites (must have installed)
-   - [Node.js](https://nodejs.org/en/) (Node v16+)
+   - [Node.js](https://nodejs.org/en/) (Node v18+)
    - [PNpm](https://pnpm.js.org/en/installation)
 2. [SSH Keys Setup](#ssh-keys-setup)
 3. [Access Token Setup](#access-token-setup)
