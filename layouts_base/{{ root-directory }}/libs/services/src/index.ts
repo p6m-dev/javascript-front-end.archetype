@@ -1,2 +1,2 @@
-export * from './lib/user';
-export * from './lib/user/index.mock';
+export * from './lib/user/user';
+export * from './lib/user/user.mock';

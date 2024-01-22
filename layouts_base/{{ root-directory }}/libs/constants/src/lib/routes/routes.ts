@@ -5,4 +5,5 @@ export const routes = {
   PROFILE: {
     path: '/profile',
   },
+  // INTEGRATION: @nax-tech/react:feature route
 };
