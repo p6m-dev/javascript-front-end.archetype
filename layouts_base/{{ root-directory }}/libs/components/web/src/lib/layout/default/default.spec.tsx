@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Layout } from './layout';
+import { DefaultLayout as Layout } from './default';
 
 // Common props
 const propClassName = 'some-class';

@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { Layout } from './layout';
+import { DefaultLayout as Layout } from './default';
 import type { StoryObj, Meta } from '@storybook/react';
 
 export default {

@@ -2,9 +2,10 @@ import { FC } from 'react';
 import cx from 'classnames';
 import { twMerge } from 'tailwind-merge';
 import { DefaultProps } from '@nax-tech/components-web';
-import { Header, Footer } from '@{{package-name}}/components-web';
+import { Header } from './header';
+import { Footer } from './footer';
 
-export interface LayoutProps extends DefaultProps {
+export interface DefaultLayoutProps extends DefaultProps {
   /**
    * Avatar image url for user menu icon
    */
@@ -38,7 +39,7 @@ export interface LayoutProps extends DefaultProps {
   onHome?: () => void;
 }
 
-export const Layout: FC<LayoutProps> = ({
+export const DefaultLayout: FC<DefaultLayoutProps> = ({
   avatar,
   menuProfile,
   menuAuth,
@@ -82,5 +83,3 @@ export const Layout: FC<LayoutProps> = ({
     </div>
   );
 };
-
-export default Layout;
