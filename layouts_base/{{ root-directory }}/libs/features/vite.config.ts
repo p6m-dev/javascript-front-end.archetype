@@ -6,7 +6,7 @@ import viteTsConfigPaths from 'vite-tsconfig-paths';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-  cacheDir: '../../../node_modules/.vite/features-profile',
+  cacheDir: '../../node_modules/.vite/features-profile',
 
   plugins: [
     dts({
@@ -16,7 +16,7 @@ export default defineConfig({
     }),
     react(),
     viteTsConfigPaths({
-      root: '../../../',
+      root: '../../',
     }),
   ],
 
@@ -41,7 +41,7 @@ export default defineConfig({
   test: {
     globals: true,
     cache: {
-      dir: '../../../node_modules/.vitest',
+      dir: '../../node_modules/.vitest',
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],

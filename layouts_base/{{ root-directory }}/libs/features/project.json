@@ -1,6 +1,6 @@
 {
   "name": "features-profile",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/features/profile/src",
   "projectType": "library",
   "tags": [],
@@ -17,7 +17,7 @@
       "outputs": ["{workspaceRoot}/coverage/libs/features/profile"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/libs/features/profile"
+        "reportsDirectory": "../../coverage/libs/features/profile"
       }
     }
   }

@@ -3,7 +3,7 @@ import { withAuth, isAuthenticated } from '@nax-tech/auth';
 import { useTranslation } from '@nax-tech/i18n';
 import { withUser, isLoaded, UserState } from '@{{package-name}}/context';
 import { compose } from '@nax-tech/utils-components';
-import { UserForm } from '../forms/user/user';
+import { UserForm } from '../../components';
 
 interface Props {
   userState: UserState;
