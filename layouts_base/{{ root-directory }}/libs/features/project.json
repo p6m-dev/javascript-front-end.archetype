@@ -1,7 +1,7 @@
 {
-  "name": "features-profile",
+  "name": "features",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/features/profile/src",
+  "sourceRoot": "libs/features/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,15 +9,15 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/features/profile/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/features/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["{workspaceRoot}/coverage/libs/features/profile"],
+      "outputs": ["{workspaceRoot}/coverage/libs/features"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/libs/features/profile"
+        "reportsDirectory": "../../coverage/libs/features"
       }
     }
   }
