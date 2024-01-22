@@ -31,7 +31,7 @@ const Component: FC<Props> = ({ userState: { user, updateUser } }) => {
   );
 };
 
-export const Profile = compose(
+export const Default = compose(
   withAuth(isAuthenticated),
   withUser(isLoaded)
 )(Component);
