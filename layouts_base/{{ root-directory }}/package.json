@@ -78,6 +78,7 @@
     "@docusaurus/types": "^3.0.1",
     "@nax-tech/design-system": "^1.5.0",
     "@nax-tech/javascript": "^1.1.0",
+    "@nax-tech/layouts-web": "^0.3.0",
     "@nax-tech/next": "^1.14.0",
     "@nax-tech/react": "^1.18.0",
     "@nx-plus/docusaurus": "15.0.0-rc.0",
