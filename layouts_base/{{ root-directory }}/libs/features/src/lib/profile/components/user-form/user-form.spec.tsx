@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { UserForm } from './user-form/user-form';
+import { UserForm } from './user-form';
 
 const props = {
   title: 'Title',

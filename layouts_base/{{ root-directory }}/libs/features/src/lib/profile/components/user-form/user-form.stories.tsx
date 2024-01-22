@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { UserForm } from './user-form/user-form';
+import { UserForm } from './user-form';
 import type { StoryObj, Meta } from '@storybook/react';
 
 export default {

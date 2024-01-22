@@ -1,6 +1,5 @@
 export const routes = {
-    DEFAULT: {
-      path: '/',
-    }
+  DEFAULT: {
+    path: '/',
+  },
 };
-  
