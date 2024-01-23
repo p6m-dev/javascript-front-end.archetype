@@ -20,7 +20,7 @@
       "@{{package-name}}/context": ["libs/context/src/index.ts"],
       "@{{package-name}}/design-system": ["libs/design-system/src/index.ts"],
       "@{{package-name}}/design-system/styles": ["libs/design-system/src/index.css"],
-      "@{{package-name}}/features": ["libs/features/src/index.ts"],
+      "@{{package-name}}/features-profile": ["libs/features/profile/src/index.ts"],
       "@{{package-name}}/models": ["libs/models/src/index.ts"],
       "@{{package-name}}/services": ["libs/services/src/index.ts"]
     }
