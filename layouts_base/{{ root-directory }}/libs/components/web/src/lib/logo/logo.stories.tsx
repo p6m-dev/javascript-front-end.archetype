@@ -37,10 +37,6 @@ export default {
       },
     },
   },
-  decorators: [(ComponentStory) => ComponentStory()],
-  parameters: {
-    zeplinLink: '',
-  },
 } as Meta<typeof Logo>;
 
 type Story = StoryObj<typeof Logo>;

@@ -6,8 +6,10 @@ import type { StorybookConfig } from '@storybook/react-vite';
 const config: StorybookConfig = {
   ...rootMain,
   core: { ...rootMain.core, builder: '@storybook/builder-vite' },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
   stories: [
-    ...rootMain.stories,
     '../../design-system/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../../components/web/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../../features/**/*.stories.@(js|jsx|ts|tsx|mdx)',
