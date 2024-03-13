@@ -37,10 +37,6 @@ export default {
       },
     },
   },
-  decorators: [(ComponentStory) => ComponentStory()],
-  parameters: {
-    zeplinLink: '',
-  },
 } as Meta<typeof Layout>;
 
 type Story = StoryObj<typeof Layout>;
@@ -48,7 +44,6 @@ type Story = StoryObj<typeof Layout>;
 export const Default: Story = {
   args: {
     avatar: 'U',
-    onLogout: action('onLogout'),
     onProfile: action('onProfile'),
     testId: 'layout',
   },

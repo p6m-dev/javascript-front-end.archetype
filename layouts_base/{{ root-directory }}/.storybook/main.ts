@@ -2,7 +2,7 @@ import type { StorybookConfig } from '@storybook/react-vite';
 
 export const rootMain: StorybookConfig = {
   stories: [],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-mdx-gfm'],
+  addons: ['@storybook/addon-essentials'],
   framework: {
     name: '@storybook/react-vite',
     options: {}
@@ -10,4 +10,13 @@ export const rootMain: StorybookConfig = {
   docs: {
     autodocs: true
   },
+};
+
+export const framework = {
+  name: '@storybook/react-vite',
+  options: {}
+};
+
+export const docs = {
+  autodocs: true
 };

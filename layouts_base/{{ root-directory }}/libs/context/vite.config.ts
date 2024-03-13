@@ -1,13 +1,8 @@
 import { join } from 'path';
 import { defineConfig, UserConfig } from 'vite';
-import { InlineConfig } from 'vitest';
 import react from '@vitejs/plugin-react';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 import dts from 'vite-plugin-dts';
-
-interface VitestConfigExport extends UserConfig {
-  test: InlineConfig;
-}
 
 export default defineConfig({
   plugins: [
@@ -50,6 +45,7 @@ export default defineConfig({
   },
 
   test: {
+    reporters: ['default'],
     globals: true,
     cache: {
       dir: '../../node_modules/.vitest',
@@ -57,4 +53,4 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
-} as VitestConfigExport);
+} as UserConfig);
