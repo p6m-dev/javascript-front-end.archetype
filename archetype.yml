@@ -1,5 +1,5 @@
 ---
-desciption: "NAX Front-End Ecosystem"
+description: "NAX Front-End Ecosystem"
 authors: ["Victor Yurkin <victor.yurkin@naxgrp.com>"]
 languages: ["TypeScript"]
 frameworks: ["React.js", "Next.js", "React Native"]
