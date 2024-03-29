@@ -96,7 +96,7 @@ export const Header: FC<HeaderProps> = ({
         </div>
 
         {(onAuth || onProfile) && (
-          <DropdownMenu items={items}>
+          <DropdownMenu>
             <div className="text-white bg-neutral-700 hover:bg-neutral-800 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer">
               {avatar ? (
                 <span data-testid="header-avatar">{avatar}</span>

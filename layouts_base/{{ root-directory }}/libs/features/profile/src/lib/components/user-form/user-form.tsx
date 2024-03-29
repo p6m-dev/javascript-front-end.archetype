@@ -114,8 +114,7 @@ export const UserForm: FC<Props> = ({
         <Button
           disabled={isLoading}
           loading={isLoading}
-          type="primary"
-          htmlType="submit"
+          type="submit"
           testId="submit"
         >
           {labels['submit']}
