@@ -10,8 +10,8 @@ const propAriaLabel = 'some-aria-label';
 const propChildren = 'Content';
 // Custom props
 const propAvatar = 'A';
-const propOnLogout = vitest.fn();
-const propOnProfile = vitest.fn();
+const propOnLogout = jest.fn();
+const propOnProfile = jest.fn();
 
 describe('Layout', () => {
   // Test default rendering, required props and children

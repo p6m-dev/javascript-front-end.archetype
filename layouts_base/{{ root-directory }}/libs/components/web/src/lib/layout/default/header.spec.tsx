@@ -9,8 +9,8 @@ const propTestId = 'some-testid';
 const propAriaLabel = 'some-aria-label';
 // Custom props
 const propAvatar = 'A';
-const propOnLogout = vitest.fn();
-const propOnProfile = vitest.fn();
+const onAuth = jest.fn();
+const propOnProfile = jest.fn();
 
 describe('Header', () => {
   // Test default rendering, required props and children
@@ -18,7 +18,7 @@ describe('Header', () => {
     const { baseElement } = render(
       <Header
         avatar={propAvatar}
-        onLogout={propOnLogout}
+        onAuth={onAuth}
         onProfile={propOnProfile}
         testId={propTestId}
       />
@@ -33,7 +33,7 @@ describe('Header', () => {
     const { getByTestId } = render(
       <Header
         avatar={propAvatar}
-        onLogout={propOnLogout}
+        onAuth={onAuth}
         onProfile={propOnProfile}
         testId={propTestId}
         className={propClassName}
@@ -46,7 +46,7 @@ describe('Header', () => {
     const { getByTestId } = render(
       <Header
         avatar={propAvatar}
-        onLogout={propOnLogout}
+        onAuth={onAuth}
         onProfile={propOnProfile}
         testId={propTestId}
         id={propId}
@@ -59,7 +59,7 @@ describe('Header', () => {
     const { getByTestId } = render(
       <Header
         avatar={propAvatar}
-        onLogout={propOnLogout}
+        onAuth={onAuth}
         onProfile={propOnProfile}
         testId={propTestId}
         ariaLabel={propAriaLabel}
@@ -75,7 +75,7 @@ describe('Header', () => {
     const { getByTestId } = render(
       <Header
         avatar={propAvatar}
-        onLogout={propOnLogout}
+        onAuth={onAuth}
         onProfile={propOnProfile}
         testId={propTestId}
         ariaLabel={propAriaLabel}
@@ -93,7 +93,7 @@ describe('Header', () => {
     const { findByText } = render(
       <Header
         avatar={propAvatar}
-        onLogout={propOnLogout}
+        onAuth={onAuth}
         onProfile={propOnProfile}
         testId={propTestId}
         ariaLabel={propAriaLabel}

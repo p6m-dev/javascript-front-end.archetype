@@ -1,5 +1,5 @@
-const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
+const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 
 const content = [
   join(
@@ -22,7 +22,7 @@ module.exports = {
   content,
   darkMode: 'class',
   plugins: [],
-  presets: [require('../../design-system/src/tailwind-presets.json')],
+  presets: [require('../design-system/src/tailwind-presets.json')],
   safelist: [
     {
       pattern: /^bg-/,

@@ -41,7 +41,7 @@ describe('Logo', () => {
 
   // Handlers and other methods
   it('should handle a click event', () => {
-    const mock = vitest.fn();
+    const mock = jest.fn();
     const { getByTestId } = render(<Logo testId={propTestId} onClick={mock} />);
     fireEvent.click(getByTestId(propTestId));
     expect(mock).toHaveBeenCalled();

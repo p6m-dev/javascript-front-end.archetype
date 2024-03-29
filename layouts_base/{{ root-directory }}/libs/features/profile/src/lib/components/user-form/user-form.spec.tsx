@@ -20,7 +20,7 @@ const props = {
   },
   successMessage: 'Successfully updated',
   errorMessage: 'Something went wrong',
-  onUpdate: vitest.fn(),
+  onUpdate: jest.fn(),
   testId: 'form',
 };
 
