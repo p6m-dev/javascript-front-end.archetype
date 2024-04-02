@@ -17,7 +17,7 @@ script:
               - glob: "*.png"
               - glob: "*.jpg"
               - glob: "*.ico"
-            action: SKIP
+            action: COPY
 
   - set:
       org-prefix:
