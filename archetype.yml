@@ -14,7 +14,6 @@ script:
             action: SKIP
           Assets:
             patterns:
-              - glob: "*.png"
               - glob: "*.jpg"
               - glob: "*.ico"
             action: SKIP
