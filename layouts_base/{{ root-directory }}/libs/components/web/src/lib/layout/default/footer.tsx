@@ -10,11 +10,10 @@ export const Footer: FC<FooterProps> = ({
   id,
   testId,
   ariaLabel,
-  children,
 }) => {
   // Component base class names. Can be overridden by className property.
   const baseClass = cx({
-    'py-s': true,
+    'py-s bg-neutral-100 dark:bg-black/20': true,
   });
 
   // Final class names
@@ -27,8 +26,8 @@ export const Footer: FC<FooterProps> = ({
       {...(id ? { id: id } : {})}
       {...(ariaLabel ? { 'aria-label': ariaLabel } : {})}
     >
-      <p className="typo-l-footnote-regular text-neutral-500 text-center">
-        {children}
+      <p className="typo-l-footnote-regular text-neutral-500  dark:text-slate-500 text-center">
+        &copy; {new Date().getFullYear()} NAX Group, Inc.
       </p>
     </footer>
   );

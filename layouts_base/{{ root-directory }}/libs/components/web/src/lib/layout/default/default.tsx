@@ -5,49 +5,7 @@ import { DefaultProps } from '@nax-tech/components-web';
 import { Header } from './header';
 import { Footer } from './footer';
 
-export interface DefaultLayoutProps extends DefaultProps {
-  /**
-   * Avatar image url for user menu icon
-   */
-  avatar?: string;
-  /**
-   * Profile menu item text content
-   */
-  menuProfile?: string;
-  /**
-   * Logout menu item text content
-   */
-  menuAuth?: string;
-  /**
-   * Footer copyright content
-   */
-  footerCopy?: string;
-  /**
-   * Logout callback
-   * @returns void
-   */
-  onAuth?: () => void;
-  /**
-   * On profile user menu click callback
-   * @returns void
-   */
-  onProfile?: () => void;
-  /**
-   * On logo click callback
-   * @returns void
-   */
-  onHome?: () => void;
-}
-
-export const DefaultLayout: FC<DefaultLayoutProps> = ({
-  avatar,
-  menuProfile,
-  menuAuth,
-  footerCopy,
-  onAuth,
-  onProfile,
-  onHome,
-  // Common default properties for each component
+export const DefaultLayout: FC<DefaultProps> = ({
   className,
   id,
   testId,
@@ -63,14 +21,7 @@ export const DefaultLayout: FC<DefaultLayoutProps> = ({
   const finalClasses = twMerge(baseClass, className);
   return (
     <div className="h-full flex flex-col">
-      <Header
-        avatar={avatar}
-        menuProfile={menuProfile}
-        menuAuth={menuAuth}
-        onProfile={onProfile}
-        onAuth={onAuth}
-        onHome={onHome}
-      />
+      <Header />
       <main
         className={finalClasses}
         {...(testId ? { 'data-testid': testId } : {})}
@@ -79,7 +30,7 @@ export const DefaultLayout: FC<DefaultLayoutProps> = ({
       >
         {children}
       </main>
-      <Footer>{footerCopy}</Footer>
+      <Footer />
     </div>
   );
 };

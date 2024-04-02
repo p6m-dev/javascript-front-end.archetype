@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions';
 import { DefaultLayout as Layout } from './default';
 import type { StoryObj, Meta } from '@storybook/react';
 
@@ -43,8 +42,6 @@ type Story = StoryObj<typeof Layout>;
 
 export const Default: Story = {
   args: {
-    avatar: 'U',
-    onProfile: action('onProfile'),
     testId: 'layout',
   },
   render: (args) => (
