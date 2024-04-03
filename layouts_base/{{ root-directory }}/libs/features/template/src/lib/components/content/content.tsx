@@ -57,7 +57,7 @@ interface LinkProps extends PropsWithChildren {
 
 const Link: FC<LinkProps> = ({ href, target, title, children }) => {
   return (
-    <a href={href} className="text-sky-600 hover:underline" target={target} title={title || 'link'}>
+    <a href={href} className="text-sky-600 underline hover:text-sky-400" target={target} title={title || 'link'}>
       {children}
     </a>
   );
