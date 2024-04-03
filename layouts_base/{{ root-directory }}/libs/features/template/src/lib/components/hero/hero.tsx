@@ -47,9 +47,9 @@ export function Hero() {
               <p className="font-display mb-2xs bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text text-3xl tracking-tight text-transparent">
                 Welcome to
               </p>
-              <p className="font-display mb-s bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text text-5xl tracking-tight text-transparent">
+              <h1 className="font-display mb-s bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text text-5xl tracking-tight text-transparent">
                 NAX Front-End Ecosystem
-              </p>
+              </h1>
               <p className="text-2xl tracking-tight text-slate-400">
                 front-end applications rapid development platform
                 <br />
