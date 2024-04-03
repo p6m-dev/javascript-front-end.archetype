@@ -29,6 +29,8 @@ export const ContactForm = () => {
       <Button
         variant="secondary"
         className="mx-auto block w-full border-gray-300 bg-gray-200 dark:border-gray-600 dark:bg-slate-700 dark:text-gray-300 "
+        ariaLabel="Submit"
+        title="Submit"
       >
         Submit
       </Button>

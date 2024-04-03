@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { IconSun } from '@nax-tech/icons-web';
-import { IconMoon } from '@nax-tech/icons-web';
+import { IconSun, IconMoon } from '@nax-tech/icons-web';
 
 export const ModeSwitch = () => {
   const [isDarkMode, toggleMode] = useState(false);
@@ -20,6 +19,7 @@ export const ModeSwitch = () => {
       <button
         className="w-7 h-7 flex items-center justify-center border border-slate-500 rounded-full relative z-30"
         onClick={() => toggleMode(!isDarkMode)}
+        title="Mode Switch"
       >
         {isDarkMode ? (
           <IconSun className="w-5 fill-slate-500" />

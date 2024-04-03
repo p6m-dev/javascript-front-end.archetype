@@ -52,11 +52,12 @@ const Shell: FC<PropsWithChildren> = ({ children }) => {
 interface LinkProps extends PropsWithChildren {
   href: string;
   target?: string;
+  title?: string;
 }
 
-const Link: FC<LinkProps> = ({ href, target, children }) => {
+const Link: FC<LinkProps> = ({ href, target, title, children }) => {
   return (
-    <a href={href} className="text-sky-600 hover:underline" target={target}>
+    <a href={href} className="text-sky-600 hover:underline" target={target} title={title || 'link'}>
       {children}
     </a>
   );
@@ -87,6 +88,7 @@ export function Content() {
                 <Link
                   href="https://archetect.github.io/archetect.html"
                   target="_blank"
+                  title="Archetect"
                 >
                   Archetect
                 </Link>{' '}
@@ -120,7 +122,7 @@ export function Content() {
                   Archetect
                 </Link>{' '}
                 and{' '}
-                <Link href="https://nx.dev" target="_blank">
+                <Link href="https://nx.dev" target="_blank" title="nx.dev">
                   nx.dev
                 </Link>
               </Paragraph>
@@ -129,6 +131,7 @@ export function Content() {
                 <Link
                   href="https://archetect.github.io/archetect.html"
                   target="_blank"
+                  title="Archetect"
                 >
                   Archetect
                 </Link>{' '}
@@ -136,6 +139,7 @@ export function Content() {
                 <Link
                   href="https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console"
                   target="_blank"
+                  title="Nx Console"
                 >
                   Nx Console
                 </Link>{' '}
@@ -151,6 +155,7 @@ export function Content() {
                 <Link
                   href="https://https://front-end.docs.platform.naxgrp.com/docs/getting-started"
                   target="_blank"
+                  title="Documentation"
                 >
                   here
                 </Link>
@@ -158,7 +163,7 @@ export function Content() {
               </Paragraph>
               <Paragraph>
                 You supposed to have access to the{' '}
-                <a href="https://github.com/nax-platform">nax-platform</a>{' '}
+                <a href="https://github.com/nax-platform" title="NAX Platform Github repo">nax-platform</a>{' '}
                 Github repository. If you have any issues accessing the
                 documentation, please contact us.
               </Paragraph>
@@ -176,7 +181,7 @@ export function Content() {
                   </div>
                   <Paragraph>
                     The documentation is implemeted using{' '}
-                    <Link href="https://docusaurus.io" target="_blank">
+                    <Link href="https://docusaurus.io" target="_blank" title="Docusaurus">
                       Docusaurus
                     </Link>{' '}
                     framework. It can be deployed to the Github pages or any of
@@ -190,7 +195,7 @@ export function Content() {
               <Header anchor="storybook">Storybook</Header>
               <Paragraph>
                 The{' '}
-                <Link href="https://storybook.js.org" target="_blank">
+                <Link href="https://storybook.js.org" target="_blank" title="Storybook">
                   Storybook
                 </Link>{' '}
                 is a tool for developing UI components in isolation. It makes
@@ -202,6 +207,7 @@ export function Content() {
                   target="_blank"
                   className="text-center"
                   rel="noreferrer"
+                  title="Storybook"
                 >
                   <LogoStorybook />
                 </a>
@@ -211,6 +217,7 @@ export function Content() {
                 <Link
                   href="https://front-end.docs.platform.naxgrp.com/component-library/index.html"
                   target="_blank"
+                  title="Components Library"
                 >
                   NAX UI Components Library
                 </Link>
@@ -232,7 +239,7 @@ export function Content() {
                   <LogoFigma />
                 </div>
                 <Paragraph>
-                  <Link href="https://www.figma.com/file/zj54b88i4RFbt8YKvv8ujv/NAX-Design-Example-File-Template-COPY-ME?type=design&node-id=1%3A36&mode=design&t=MvWZlq2fvrxRIkVP-1">
+                  <Link href="https://www.figma.com/file/zj54b88i4RFbt8YKvv8ujv/NAX-Design-Example-File-Template-COPY-ME?type=design&node-id=1%3A36&mode=design&t=MvWZlq2fvrxRIkVP-1" title="Figma">
                     NAX UI Template Figma File
                   </Link>
                 </Paragraph>
@@ -253,7 +260,7 @@ export function Content() {
                   <LogoFigma />
                 </div>
                 <Paragraph>
-                  <Link href="https://www.figma.com/file/xbNpx13Mm3SGB49laoBKzj/NAX-Library---Components-V2.1?type=design&node-id=1%3A36&mode=design&t=L09TtWt29pOXIIwq-1">
+                  <Link href="https://www.figma.com/file/xbNpx13Mm3SGB49laoBKzj/NAX-Library---Components-V2.1?type=design&node-id=1%3A36&mode=design&t=L09TtWt29pOXIIwq-1" title="Figma">
                     NAX UI Components Library Figma File
                   </Link>
                 </Paragraph>
@@ -269,6 +276,7 @@ export function Content() {
                 <Link
                   href="https://www.notion.so/naxgrp/3d43aba83310488d954da4b78fbdffb6?v=db7516329be643849ad23c90219a1b21&pvs=4"
                   target="_blank"
+                  title="Support"
                 >
                   here
                 </Link>

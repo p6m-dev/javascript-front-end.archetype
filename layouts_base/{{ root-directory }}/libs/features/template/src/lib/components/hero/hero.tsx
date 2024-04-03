@@ -60,6 +60,7 @@ export function Hero() {
                   href="https://github.com/nax-platform/javascript-front-end-archetype"
                   target="_blanc"
                   className="rounded-full bg-sky-300 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-sky-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
+                  title="View on Github"
                 >
                   View on Github
                 </a>
@@ -67,6 +68,7 @@ export function Hero() {
                   href="front-end.docs.platform.naxgrp.com"
                   target="_blanc"
                   className="rounded-full bg-slate-800 px-4 py-3 text-sm font-medium text-white hover:bg-slate-700 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50 active:text-slate-400"
+                  title="Documentation"
                 >
                   Documentation
                 </a>
