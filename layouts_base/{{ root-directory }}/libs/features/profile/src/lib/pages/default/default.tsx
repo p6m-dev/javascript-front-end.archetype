@@ -30,6 +30,4 @@ const Component: FC<Props> = ({ userState: { user, updateUser } }) => {
   );
 };
 
-export const Default = compose(
-  withUser(isLoaded)
-)(Component);
+export const Default = compose(withUser(isLoaded))(Component);

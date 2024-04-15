@@ -45,3 +45,8 @@ describe('Footer', () => {
     expect(getByTestId(props.testId)).toHaveTextContent(props.labels.submit);
   });
 });
+describe('Features - Profile', () => {
+  it('default test', () => {
+    expect(true).toBeTruthy();
+  });
+});

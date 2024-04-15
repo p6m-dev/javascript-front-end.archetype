@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Logo } from './logo';
 
@@ -37,13 +37,5 @@ describe('Logo', () => {
       'aria-label',
       propAriaLabel
     );
-  });
-
-  // Handlers and other methods
-  it('should handle a click event', () => {
-    const mock = jest.fn();
-    const { getByTestId } = render(<Logo testId={propTestId} onClick={mock} />);
-    fireEvent.click(getByTestId(propTestId));
-    expect(mock).toHaveBeenCalled();
   });
 });

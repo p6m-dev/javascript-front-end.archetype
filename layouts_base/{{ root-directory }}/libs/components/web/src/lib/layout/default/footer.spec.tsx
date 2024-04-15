@@ -7,7 +7,7 @@ const propClassName = 'some-class';
 const propId = 'some-id';
 const propTestId = 'some-testid';
 const propAriaLabel = 'some-aria-label';
-const propChildren = 'Content';
+const propChildren = 'NAX Group, Inc';
 
 describe('Footer', () => {
   // Test default rendering, required props and children
