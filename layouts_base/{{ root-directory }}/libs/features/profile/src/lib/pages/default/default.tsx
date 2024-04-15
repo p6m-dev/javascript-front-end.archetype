@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { withAuth, isAuthenticated } from '@nax-tech/auth';
 import { useTranslation } from '@nax-tech/i18n';
 import { compose } from '@nax-tech/utils-components';
 import { withUser, isLoaded, UserState } from '@{{package-name}}/context';
@@ -32,6 +31,5 @@ const Component: FC<Props> = ({ userState: { user, updateUser } }) => {
 };
 
 export const Default = compose(
-  withAuth(isAuthenticated),
   withUser(isLoaded)
 )(Component);
