@@ -106,6 +106,7 @@
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-measure": "^8.0.0",
     "@storybook/addon-outline": "^8.0.0",
+    "@storybook/builder-vite": "^8.0.0",
     "@storybook/client-logger": "^8.0.0",
     "@storybook/core-server": "^8.0.0",
     "@storybook/manager-api": "^8.0.0",
