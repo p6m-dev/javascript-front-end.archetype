@@ -6,9 +6,6 @@ export default {
   component: UserForm,
   title: 'Features/User/Form',
   decorators: [(ComponentStory) => ComponentStory()],
-  parameters: {
-    zeplinLink: '',
-  },
 } as Meta<typeof UserForm>;
 
 type Story = StoryObj<typeof UserForm>;

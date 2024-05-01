@@ -14,11 +14,7 @@ const config: StorybookConfig = {
     '../../components/web/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../../features/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
-  addons: [
-    '@storybook/addon-essentials',
-    ...(rootMain.addons || []),
-    'storybook-zeplin/register',
-  ],
+  addons: ['@storybook/addon-essentials', ...(rootMain.addons || [])],
   viteFinal: async (config, options) => {
     if (!config.plugins) {
       config.plugins = [];
