@@ -22,7 +22,7 @@ module.exports = {
   content,
   darkMode: 'class',
   plugins: [],
-  presets: [require('../design-system/src/tailwind-presets.json')],
+  presets: [require('../../tailwind-presets.json')],
   safelist: [
     {
       pattern: /^bg-/,
