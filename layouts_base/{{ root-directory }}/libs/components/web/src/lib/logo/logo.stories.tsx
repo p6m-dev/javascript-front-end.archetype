@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions';
 import { Logo } from './logo';
 import type { StoryObj, Meta } from '@storybook/react';
 
@@ -42,7 +41,5 @@ export default {
 type Story = StoryObj<typeof Logo>;
 
 export const Default: Story = {
-  args: {
-    onClick: action('Logo > onClick'),
-  },
+  args: {},
 };
