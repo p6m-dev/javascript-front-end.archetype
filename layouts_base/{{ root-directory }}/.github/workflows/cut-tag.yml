@@ -13,7 +13,7 @@ run-name: Tag & Release by @${{'{'}}{ github.triggering_actor }}
 jobs:
   tag_version:
     name: Tag Version
-    uses: nax-platform/github-actions/.github/workflows/cut-tag-javascript.yml@main
+    uses: nax-tech/github-actions/.github/workflows/cut-tag-javascript.yml@main
     secrets:
       ARTIFACTORY_USERNAME: ${{'{'}}{ secrets.ARTIFACTORY_USERNAME }}
       ARTIFACTORY_IDENTITY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}

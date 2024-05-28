@@ -11,7 +11,7 @@ run-name: Deploy ${{'{'}}{ inputs.tag }} to Production by @${{'{'}}{ github.trig
 jobs:
   promote:
     name: Promote Tag with Digest
-    uses: nax-platform/github-actions/.github/workflows/promote-app-tag-with-digest.yaml@main
+    uses: nax-tech/github-actions/.github/workflows/promote-app-tag-with-digest.yaml@main
     with:
       target-env: prd
       tag: ${{'{'}}{ inputs.tag }}
