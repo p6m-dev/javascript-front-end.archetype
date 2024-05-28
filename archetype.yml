@@ -114,6 +114,17 @@ script:
   - exec:
       command: "pnpm"
       args:
+        - "store"
+        - "prune"
+
+  - exec:
+      command: "nax"
+      args:
+        - "context"
+
+  - exec:
+      command: "pnpm"
+      args:
         - "install"
         - "--dir"
         - "{{ root-directory }}"
