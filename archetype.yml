@@ -117,10 +117,10 @@ script:
         - "store"
         - "prune"
 
-  - exec:
-      command: "nax"
-      args:
-        - "context"
+  # - exec:
+  #     command: "nax"
+  #     args:
+  #       - "context"
 
   - exec:
       command: "pnpm"
