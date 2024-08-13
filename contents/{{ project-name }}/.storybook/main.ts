@@ -7,9 +7,6 @@ export const rootMain: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {}
   },
-  docs: {
-    autodocs: true
-  },
 };
 
 export const framework = {
@@ -17,7 +14,8 @@ export const framework = {
   options: {}
 };
 
-export const docs = {
-  autodocs: true
-};
 export const addons = ['@chromatic-com/storybook'];
+
+export const typescript = {
+  reactDocgen: 'react-docgen-typescript'
+};
