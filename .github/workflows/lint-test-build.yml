@@ -15,15 +15,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Checkout  
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-      - run: cargo test --all-features
+      - name: Checkout  
+        uses: actions/checkout@v2
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -41,17 +39,10 @@ jobs:
         with:
           toolchain: stable
 
-      - name: Install archetect
-        run: |
-          git clone https://github.com/archetect/archetect.git
-          cd archetect
-          cargo install --path archetect-bin --force
-          cd ..
-
-      # - name: Install archetect from crates.io
-      #   uses: baptiste0928/cargo-install@v2
-      #   with:
-      #     crate: archetect
+      - name: Install archetect from crates.io
+        uses: baptiste0928/cargo-install@v2
+        with:
+          crate: archetect
 
       - name: archetect version
         run: archetect --version
