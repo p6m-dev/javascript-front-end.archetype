@@ -41,7 +41,7 @@ jobs:
 
       - name: Install archetect
         run: |
-          git clone git@github.com:archetect/archetect.git
+          git clone https://github.com/archetect/archetect.git
           cd archetect
           cargo install --path ./archetect-cli --force
           cd ..
