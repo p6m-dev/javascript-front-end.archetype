@@ -43,7 +43,7 @@ jobs:
         run: |
           git clone https://github.com/archetect/archetect.git
           cd archetect
-          cargo install --path ./archetect-cli --force
+          cargo install --path archetect-bin --force
           cd ..
 
       # - name: Install archetect from crates.io
