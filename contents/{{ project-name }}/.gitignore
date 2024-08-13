@@ -50,3 +50,4 @@ Thumbs.db
 .nx-container
 
 .nx/cache
+.nx/workspace-data
