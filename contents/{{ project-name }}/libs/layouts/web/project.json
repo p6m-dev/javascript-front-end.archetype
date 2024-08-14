@@ -1,0 +1,16 @@
+{
+  "name": "layouts-web",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/layouts/web/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/layouts/web/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
