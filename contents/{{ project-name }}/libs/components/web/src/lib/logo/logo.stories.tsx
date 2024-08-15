@@ -5,11 +5,6 @@ export default {
   component: Logo,
   title: 'Components/Logo',
   argTypes: {
-    onClick: {
-      control: {
-        type: 'function',
-      },
-    },
     className: {
       control: {
         type: 'text',
@@ -26,11 +21,6 @@ export default {
       },
     },
     ariaLabel: {
-      control: {
-        type: 'text',
-      },
-    },
-    t: {
       control: {
         type: 'text',
       },
