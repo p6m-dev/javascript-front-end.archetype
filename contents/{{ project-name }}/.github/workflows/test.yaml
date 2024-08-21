@@ -9,7 +9,7 @@ run-name: Test
 
 jobs:
   test:
-    uses: nax-tech/github-actions/.github/workflows/test-front-end.yaml@main
+    uses: nax-tech/github-actions/.github/workflows/test-front-end.yaml@nx-19
     with:
       REACT_APP_ENV: "dev"
     secrets:
