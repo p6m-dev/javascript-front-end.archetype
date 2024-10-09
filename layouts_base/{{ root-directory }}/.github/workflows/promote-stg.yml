@@ -1,0 +1,19 @@
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to promote'
+        required: true
+
+name: 3. Promote Tag to Stage
+run-name: Deploy ${{'{'}}{ inputs.tag }} to Stage by @${{'{'}}{ github.triggering_actor }}
+
+jobs:
+  promote:
+    name: Promote Tag with Digest
+    uses: p6m-dev/github-actions/.github/workflows/promote-app-tag-with-digest.yaml@main
+    with:
+      target-env: stg
+      tag: ${{'{'}}{ inputs.tag }}
+    secrets:
+      TOKEN: ${{'{'}}{ secrets.REPOSITORY_PUSH_TOKEN }}

@@ -1,0 +1,91 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "extends": [
+    "prettier",
+    "plugin:storybook/recommended",
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["@nrwl/nx", "prettier", "import"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": ["tsconfig.base.json"]
+      },
+      "node": true
+    }
+  },
+  "overrides": [
+    {
+      "files": ["libs/*.ts", "libs/*.tsx", "libs/*.js", "libs/*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-this-alias": ["off"],
+        "react-hooks/exhaustive-deps": ["off"]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nrwl/nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
+      "rules": {}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+name: 0. Test
+run-name: Test
+
+jobs:
+  test:
+    uses: p6m-dev/github-actions/.github/workflows/test-front-end.yaml@main
+    with:
+      REACT_APP_ENV: "dev"
+    secrets:
+      ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}

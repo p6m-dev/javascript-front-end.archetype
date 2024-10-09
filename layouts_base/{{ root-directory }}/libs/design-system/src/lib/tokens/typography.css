@@ -1,0 +1,311 @@
+/* Large Fonts */
+
+.typo-l-large-title-bold {
+  @apply text-[120px];
+  @apply leading-[176px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-large-title-regular {
+  @apply text-[120px];
+  @apply leading-[176px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-title-1-bold {
+  @apply text-[80px];
+  @apply leading-[96px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-title-1-regular {
+  @apply text-[80px];
+  @apply leading-[96px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-title-2-bold {
+  @apply text-[64px];
+  @apply leading-[64px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-title-2-regular {
+  @apply text-[64px];
+  @apply leading-[64px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-title-3-bold {
+  @apply text-[56px];
+  @apply leading-[64px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-title-3-regular {
+  @apply text-[56px];
+  @apply leading-[64px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-title-4-bold {
+  @apply text-[48px];
+  @apply leading-[56px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-title-4-regular {
+  @apply text-[48px];
+  @apply leading-[56px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-title-5-bold {
+  @apply text-[40px];
+  @apply leading-[48px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-title-5-regular {
+  @apply text-[40px];
+  @apply leading-[48px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-subhead-1-bold {
+  @apply text-[32px];
+  @apply leading-[40px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-subhead-1-regular {
+  @apply text-[32px];
+  @apply leading-[40px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-subhead-2-bold {
+  @apply text-[24px];
+  @apply leading-[32px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-subhead-2-regular {
+  @apply text-[24px];
+  @apply leading-[32px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-body-bold {
+  @apply text-[16px];
+  @apply leading-[24px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-body-regular {
+  @apply text-[16px];
+  @apply leading-[24px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-footnote-bold {
+  @apply text-[14px];
+  @apply leading-[16px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-footnote-regular {
+  @apply text-[14px];
+  @apply leading-[16px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-l-caption-bold {
+  @apply text-[12px];
+  @apply leading-[16px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-l-caption-regular {
+  @apply text-[12px];
+  @apply leading-[16px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+/* Small Fonts */
+
+.typo-s-large-title-bold {
+  @apply text-[48px];
+  @apply leading-[64px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-large-title-regular {
+  @apply text-[48px];
+  @apply leading-[64px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-1-bold {
+  @apply text-[44px];
+  @apply leading-[56px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-1-regular {
+  @apply text-[44px];
+  @apply leading-[56px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-2-bold {
+  @apply text-[40px];
+  @apply leading-[48px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-2-regular {
+  @apply text-[40px];
+  @apply leading-[48px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-3-bold {
+  @apply text-[36px];
+  @apply leading-[40px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-3-regular {
+  @apply text-[36px];
+  @apply leading-[40px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-4-bold {
+  @apply text-[32px];
+  @apply leading-[40px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-4-regular {
+  @apply text-[32px];
+  @apply leading-[40px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-title-5-bold {
+  @apply text-[24px];
+  @apply leading-[32px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-title-5-regular {
+  @apply text-[24px];
+  @apply leading-[32px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-subtitle-1-bold {
+  @apply text-[20px];
+  @apply leading-[24px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-subtitle-1-regular {
+  @apply text-[20px];
+  @apply leading-[24px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-subtitle-2-bold {
+  @apply text-[18px];
+  @apply leading-[24px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-subtitle-2-regular {
+  @apply text-[18px];
+  @apply leading-[24px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-body-bold {
+  @apply text-[16px];
+  @apply leading-[24px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-body-regular {
+  @apply text-[16px];
+  @apply leading-[24px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-footnote-bold {
+  @apply text-[12px];
+  @apply leading-[16px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-footnote-regular {
+  @apply text-[12px];
+  @apply leading-[16px];
+  @apply font-normal;
+  @apply font-sans;
+}
+
+.typo-s-caption-bold {
+  @apply text-[10px];
+  @apply leading-[16px];
+  @apply font-bold;
+  @apply font-sans;
+}
+
+.typo-s-caption-regular {
+  @apply text-[10px];
+  @apply leading-[16px];
+  @apply font-normal;
+  @apply font-sans;
+}

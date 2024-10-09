@@ -1,0 +1,79 @@
+:root,
+.theme-default {
+  --color-primary-50: 230 247 254;
+  --color-primary-100: 187 231 253;
+  --color-primary-200: 146 213 253;
+  --color-primary-300: 106 192 252;
+  --color-primary-400: 66 169 251;
+  --color-primary-500: 27 144 250;
+  --color-primary-600: 11 109 213;
+  --color-primary-700: 1 80 175;
+  --color-primary-800: 0 58 137;
+  --color-primary-900: 0 39 100;
+
+  --color-secondary-50: 255 240 246;
+  --color-secondary-100: 255 214 230;
+  --color-secondary-200: 254 174 209;
+  --color-secondary-300: 254 134 190;
+  --color-secondary-400: 246 91 169;
+  --color-secondary-500: 234 51 148;
+  --color-secondary-600: 195 33 125;
+  --color-secondary-700: 157 20 102;
+  --color-secondary-800: 119 9 79;
+  --color-secondary-900: 81 4 56;
+
+  --color-accent-01-50: 249 240 254;
+  --color-accent-01-100: 239 219 253;
+  --color-accent-01-200: 211 173 244;
+  --color-accent-01-300: 178 128 231;
+  --color-accent-01-400: 145 85 217;
+  --color-accent-01-500: 113 47 204;
+  --color-accent-01-600: 82 30 167;
+  --color-accent-01-700: 56 17 130;
+  --color-accent-01-800: 34 8 92;
+  --color-accent-01-900: 18 3 54;
+
+  --color-neutral-50: 252 253 255;
+  --color-neutral-100: 235 236 241;
+  --color-neutral-200: 220 220 227;
+  --color-neutral-300: 140 138 149;
+  --color-neutral-400: 94 92 102;
+  --color-neutral-500: 54 52 58;
+  --color-neutral-600: 43 41 47;
+  --color-neutral-700: 33 31 36;
+  --color-neutral-800: 29 27 32;
+  --color-neutral-900: 15 13 19;
+
+  --color-success-50: 246 255 238;
+  --color-success-100: 218 247 193;
+  --color-success-200: 184 235 150;
+  --color-success-300: 150 222 111;
+  --color-success-400: 117 209 78;
+  --color-success-500: 85 195 54;
+  --color-success-600: 59 158 39;
+  --color-success-700: 38 120 26;
+  --color-success-800: 21 82 13;
+  --color-success-900: 10 43 4;
+
+  --color-warning-50: 255 251 231;
+  --color-warning-100: 255 241 188;
+  --color-warning-200: 255 229 150;
+  --color-warning-300: 255 214 113;
+  --color-warning-400: 255 197 80;
+  --color-warning-500: 249 173 52;
+  --color-warning-600: 211 136 38;
+  --color-warning-700: 172 104 26;
+  --color-warning-800: 134 77 17;
+  --color-warning-900: 97 52 9;
+
+  --color-error-50: 255 241 240;
+  --color-error-100: 255 204 200;
+  --color-error-200: 254 164 159;
+  --color-error-300: 254 121 119;
+  --color-error-400: 254 79 83;
+  --color-error-500: 244 39 51;
+  --color-error-600: 206 24 39;
+  --color-error-700: 167 13 30;
+  --color-error-800: 129 3 23;
+  --color-error-900: 92 2 18;
+}

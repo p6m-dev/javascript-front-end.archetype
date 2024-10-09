@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "docs/**"
+      - "README.md"
+
+name: 1. Dev Build & Deploy
+run-name: Dev Build & Deploy
+
+jobs:
+  build_and_deploy:
+    uses: p6m-dev/github-actions/.github/workflows/build-deploy-front-end-container.yaml@main
+    secrets:
+      ARTIFACTORY_USERNAME: ${{'{'}}{ secrets.ARTIFACTORY_USERNAME }}
+      ARTIFACTORY_IDENTITY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
+      UPDATE_MANIFEST_TOKEN: ${{'{'}}{ secrets.UPDATE_MANIFEST_TOKEN }}
+      ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}
+      CONTENTFUL_ACCESS_TOKEN: ${{'{'}}{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+      CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{'{'}}{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
+      CONTENTFUL_SPACE_ID: ${{'{'}}{ secrets.CONTENTFUL_SPACE_ID }}
+      CONTENTFUL_ENVIRONMENT_ID: ${{'{'}}{ secrets.CONTENTFUL_ENVIRONMENT_ID }}
+    with:
+      REACT_APP_ENV: "dev"
+      ARTIFACTORY_REGISTRY: "p6m-dev.jfrog.io"

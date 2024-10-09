@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    {
+      "name": "@zeplin/cli-connect-react-plugin"
+    },
+    {
+      "name": "@zeplin/cli-connect-storybook-plugin",
+      "config": {
+        "url": "http://localhost:4400",
+        "ignoreSSLErrors": true,
+        "command": "pnpm storybook"
+      }
+    }
+  ],
+  "projects": [
+    ""
+  ],
+  "components": [],
+  "github": {
+    "repository": ""
+  }
+}

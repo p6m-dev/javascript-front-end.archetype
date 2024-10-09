@@ -1,0 +1,170 @@
+---
+description: "Front-End Ecosystem"
+authors: ["Victor Yurkin <victor.yurkin@gmail.com>"]
+languages: ["TypeScript"]
+frameworks: ["React.js", "Next.js", "React Native"]
+tags: ["Front End", "UI", "Service", "Monorepo"]
+
+requires:
+  archetect: 2.0.0-ALPHA.6
+
+script:
+  - set:
+      ###############################
+      # Derived/Implicit Variables
+      ###############################
+      organization-name:
+        value: "{{ org-prefix | train-case }}-{{ org-suffix | train-case }}"
+
+      organization-prefix:
+        value: "{{ org-prefix | train_case }}"
+
+      organization_prefix:
+        value: "{{ org-prefix | snake_case }}"
+
+      organization-suffix:
+        value: "{{ org-suffix | train_case }}"
+
+      organization_suffix:
+        value: "{{ org-suffix | snake_case }}"
+
+      project_prefix:
+        value: "{{ prj-prefix | snake_case }}"
+
+      project-prefix:
+        value: "{{ prj-prefix | train_case }}"
+
+      project_suffix:
+        value: "{{ prj-suffix | snake_case }}"
+
+      project-suffix:
+        value: "{{ prj-suffix | train_case }}"
+
+      # Project Structure and Build Variables
+      group-id:
+        value: "{{ organization_prefix | package_case }}.{{ organization_suffix | package_case }}"
+
+      group-directory:
+        value: "{{ group-id | package_to_directory }}/platform"
+
+      artifact-id:
+        value: "{{ organization-name }}-{{ project-prefix }}-{{ project-suffix }}"
+
+      artifact-prefix:
+        value: "{{ organization-name }}"
+
+      root_package:
+        value: "{{ group-id }}.{{ project_prefix | package_case }}"
+
+      root_directory:
+        value: "{{ root_package | package_to_directory }}"
+
+      property-prefix:
+        value: "{{ artifact-id }}"
+
+      package-name:
+        value: "{{ org-prefix }}-{{ org-suffix }}"
+
+      base-name:
+        value: "{{ org-suffix }}"
+
+      default-app:
+        prompt: "Front-end application:"
+        type:
+          enum:
+            - React.js
+            - Next.js
+            - React Native
+            - None
+        default: None
+
+  - set:
+      root-directory:
+        prompt: "Front-end applications root directory:"
+        default: "{{ project-prefix }}-{{ project-suffix }}"
+
+  - render:
+      directory:
+        source: layouts_base
+
+  - exec:
+      command: "pnpm"
+      args:
+        - "install"
+        - "--dir"
+        - "{{ root-directory }}"
+
+  - exec:
+      command: "pnpm"
+      args:
+        - "run"
+        - "update-p6m"
+      cwd: "{{ root-directory }}"
+
+  - if:
+      is-true: "{{ default-app == 'React.js' }}"
+      then:
+        - exec:
+            command: "pnpm"
+            args:
+              - "exec"
+              - "nx"
+              - "generate"
+              - "@p6m-tech/react:application"
+              - "webapp"
+              - "--no-interactive"
+            cwd: "{{ root-directory }}"
+
+  - if:
+      is-true: "{{ default-app == 'Next.js' }}"
+      then:
+        - exec:
+            command: "pnpm"
+            args:
+              - "exec"
+              - "nx"
+              - "generate"
+              - "@p6m-tech/next:application"
+              - "website"
+              - "--no-interactive"
+            cwd: "{{ root-directory }}"
+
+  - if:
+      is-true: "{{ default-app == 'React Native' }}"
+      then:
+        - exec:
+            command: "pnpm"
+            args:
+              - "exec"
+              - "nx"
+              - "generate"
+              - "@p6m-tech/react-native:application"
+              - "mobile"
+              - "--no-interactive"
+            cwd: "{{ root-directory }}"
+  - exec:
+      command: "git"
+      args:
+        - "init"
+      cwd: "{{ root-directory }}"
+  - exec:
+      command: "git"
+      args:
+        - "add"
+        - "--all"
+      cwd: "{{ root-directory }}"
+  - exec:
+      command: "git"
+      args:
+        - "commit"
+        - "-m"
+        - "Project init"
+      cwd: "{{ root-directory }}"
+  - exec:
+      command: "git"
+      args:
+        - "remote"
+        - "add"
+        - "origin"
+        - "git@github.com:{{ org-prefix }}-{{ org-suffix }}/{{ root-directory }}.git"
+      cwd: "{{ root-directory }}"
