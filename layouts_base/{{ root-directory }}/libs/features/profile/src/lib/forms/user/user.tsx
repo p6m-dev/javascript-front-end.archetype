@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
-import { Input, Button, DefaultProps } from '@p6m-tech/components-web';
-import { useForm, Controller } from '@p6m-tech/hooks';
+import { Input, Button, DefaultProps } from '@p6m-dev/components-web';
+import { useForm, Controller } from '@p6m-dev/hooks';
 
 interface Props extends DefaultProps {
   title: string;

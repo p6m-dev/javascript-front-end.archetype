@@ -48,7 +48,7 @@ git clone git@p6m:{{package-name}}/{{root-directory}}.git
 &nbsp;
 
 ## **Access Token Setup**
-1. Login to [JFrog Artifactory](https://p6m-dev.jfrog.io/)
+1. Login to [JFrog Artifactory](https://ybor.jfrog.io/)
 2. Once logged in, click the `Profile Icon` (top-right corner) > click `Edit Profile` > click `Generate an Identity Token`
 3. Add a descriptive name (ie: P6M_TOKEN-front-end-apps) > click `Next` > copy the `Username` and `Reference Token` (for the next step)
 4. Add the `Username` and `Reference Token` to your local machine environment variables (for Macs, it usually goes to `~/.zshrc` or `~/.zprofile`)

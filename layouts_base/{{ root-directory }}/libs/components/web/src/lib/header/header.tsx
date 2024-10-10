@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import cx from 'classnames';
 import { twMerge } from 'tailwind-merge';
-import { DefaultProps, DropdownMenu } from '@p6m-tech/components-web';
-import { IconUserOutlined } from '@p6m-tech/icons-web';
+import { DefaultProps, DropdownMenu } from '@p6m-dev/components-web';
+import { IconUserOutlined } from '@p6m-dev/icons-web';
 import { Logo } from '@{{package-name}}/components-web';
 
 export interface HeaderProps extends DefaultProps {

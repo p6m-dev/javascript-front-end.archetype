@@ -7,7 +7,7 @@ import {
   useContext,
 } from 'react';
 import produce from 'immer';
-import { GQLError } from '@p6m-tech/clients-graphql';
+import { GQLError } from '@p6m-dev/clients-graphql';
 import { User } from '@{{package-name}}/models';
 import {
   getUser as getUserSvc,

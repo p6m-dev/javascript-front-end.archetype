@@ -1,5 +1,5 @@
 import { setupServer } from 'msw/node';
-import { init } from '@p6m-tech/clients-graphql';
+import { init } from '@p6m-dev/clients-graphql';
 import { userMock, mockUserHandlers } from './index.mock';
 import { getUser, updateUser } from './';
 import '@testing-library/jest-dom';

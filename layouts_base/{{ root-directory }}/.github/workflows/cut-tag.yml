@@ -4,7 +4,7 @@ on:
       app:
         type: choice
         description: Application
-        options: 
+        options:
         - ""
 
 name: 2. Tag & Release
@@ -21,4 +21,4 @@ jobs:
       ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}
     with:
       NX_APP: ${{'{'}}{ github.event.inputs.app }}
-      ARTIFACTORY_REGISTRY: "p6m-dev.jfrog.io"
+      ARTIFACTORY_REGISTRY: "ybor.jfrog.io"

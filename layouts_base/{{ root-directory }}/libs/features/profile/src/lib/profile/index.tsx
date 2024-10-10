@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { withAuth, isAuthenticated } from '@p6m-tech/auth';
-import { useTranslation } from '@p6m-tech/i18n';
+import { withAuth, isAuthenticated } from '@p6m-dev/auth';
+import { useTranslation } from '@p6m-dev/i18n';
 import { withUser, isLoaded, UserState } from '@{{package-name}}/context';
-import { compose } from '@p6m-tech/utils-components';
+import { compose } from '@p6m-dev/utils-components';
 import { UserForm } from '../forms/user/user';
 
 interface Props {

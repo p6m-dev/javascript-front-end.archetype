@@ -12,7 +12,7 @@ User context handles fetching a user from API based on the authentication access
 // app/<app_name>/src/pages/router.tsx
 
 import { UserProvider } from '@{{package-name}}/context';
-import { useAuth } from '@p6m-tech/auth';
+import { useAuth } from '@p6m-dev/auth';
 ...
 const Router: FC = () => {
   const { isAuthenticated } = useAuth();

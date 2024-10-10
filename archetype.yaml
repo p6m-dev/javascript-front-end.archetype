@@ -1,6 +1,6 @@
 ---
 description: "Front-End Ecosystem"
-authors: ["Victor Yurkin <victor.yurkin@gmail.com>"]
+authors: ["Jose Pimienta <jose@ybor.ai>"]
 languages: ["TypeScript"]
 frameworks: ["React.js", "Next.js", "React Native"]
 tags: ["Front End", "UI", "Service", "Monorepo"]
@@ -110,7 +110,7 @@ script:
               - "exec"
               - "nx"
               - "generate"
-              - "@p6m-tech/react:application"
+              - "@p6m-dev/react:application"
               - "webapp"
               - "--no-interactive"
             cwd: "{{ root-directory }}"
@@ -124,7 +124,7 @@ script:
               - "exec"
               - "nx"
               - "generate"
-              - "@p6m-tech/next:application"
+              - "@p6m-dev/next:application"
               - "website"
               - "--no-interactive"
             cwd: "{{ root-directory }}"
@@ -138,7 +138,7 @@ script:
               - "exec"
               - "nx"
               - "generate"
-              - "@p6m-tech/react-native:application"
+              - "@p6m-dev/react-native:application"
               - "mobile"
               - "--no-interactive"
             cwd: "{{ root-directory }}"

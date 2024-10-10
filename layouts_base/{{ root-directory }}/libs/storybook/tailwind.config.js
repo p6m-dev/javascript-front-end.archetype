@@ -12,7 +12,7 @@ const content = [
   ),
   join(
     __dirname,
-    '../../node_modules/@p6m-tech/components-web/**/*!(*.stories|*.spec).{js,jsx,html}'
+    '../../node_modules/@p6m-dev/components-web/**/*!(*.stories|*.spec).{js,jsx,html}'
   ),
   ...createGlobPatternsForDependencies(__dirname),
 ];

@@ -2,7 +2,7 @@ import {
   DefaultContext,
   gqlPromise,
   mutationPromise,
-} from '@p6m-tech/clients-graphql';
+} from '@p6m-dev/clients-graphql';
 import { User } from '@{{package-name}}/models';
 
 /**
