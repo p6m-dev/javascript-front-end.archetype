@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cx from 'classnames';
 import { twMerge } from 'tailwind-merge';
-import { DefaultProps } from '@nax-tech/components-web';
+import { DefaultProps } from '@p6m-dev/components-web';
 import { Logo } from '@{{package-name}}/components-web';
 import { MobileNavigation } from './mobile';
 import { ModeSwitch } from './mode-switch';

@@ -14,7 +14,7 @@ User context handles fetching a user from API based on the authentication access
 // app/<app_name>/src/pages/router.tsx
 
 import { UserProvider } from '@{{package-name}}/context';
-import { useAuth } from '@nax-tech/auth';
+import { useAuth } from '@p6m-dev/auth';
 ...
 const Router: FC = () => {
   const { isAuthenticated } = useAuth();
@@ -42,7 +42,7 @@ const { user } = useUser();
 
 ```javascript
 import { withUser, UserState } from '@{{package-name}}/context';
-import { compose } from '@nax-tech/utils-components';
+import { compose } from '@p6m-dev/utils-components';
 ...
 
 interface Props {

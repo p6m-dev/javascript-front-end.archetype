@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cx from 'classnames';
 import { twMerge } from 'tailwind-merge';
-import { DefaultProps } from '@nax-tech/components-web';
+import { DefaultProps } from '@p6m-dev/components-web';
 
 export type FooterProps = DefaultProps;
 
@@ -27,7 +27,7 @@ export const Footer: FC<FooterProps> = ({
       {...(ariaLabel ? { 'aria-label': ariaLabel } : {})}
     >
       <p className="typo-l-footnote-regular text-neutral-500  dark:text-slate-500 text-center">
-        &copy; {new Date().getFullYear()} NAX Group, Inc.
+        &copy; {new Date().getFullYear()} ybor.ai
       </p>
     </footer>
   );

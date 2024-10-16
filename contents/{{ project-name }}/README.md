@@ -34,7 +34,7 @@ fatal: Could not read from remote repository.
 1. Open `~/.ssh/config` in your code editor (ie: for VSCode, run `code ~/.ssh/config`)
 2. Add the following to the config file:
 ```bash
-Host nax
+Host p6m
   HostName github.com
   AddKeysToAgent yes
   IdentityFile ~/.ssh/id_rsa # or replace 'id_rsa' with the newly generated ssh key file name from earlier
@@ -43,14 +43,14 @@ Host nax
 4. Run `ssh-add -l` to confirm the newly generated ssh key file name was successfully added and listed
 5. Now you can clone the repo with SSH:
 ```bash
-git clone git@nax:{{package-name}}/{{root-directory}}.git
+git clone git@p6m:{{package-name}}/{{root-directory}}.git
 ```
 &nbsp;
 
 ## **Access Token Setup**
-1. Login to [JFrog Artifactory](https://naxgrp.jfrog.io/) using [Okta SSO](https://naxgrp.okta.com/)
+1. Login to [JFrog Artifactory](https://p6m.jfrog.io/)
 2. Once logged in, click the `Profile Icon` (top-right corner) > click `Edit Profile` > click `Generate an Identity Token`
-3. Add a descriptive name (ie: NAX_TOKEN-front-end-apps) > click `Next` > copy the `Username` and `Reference Token` (for the next step)
+3. Add a descriptive name (ie: PLATFORM_TOKEN-front-end-apps) > click `Next` > copy the `Username` and `Reference Token` (for the next step)
 4. Add the `Username` and `Reference Token` to your local machine environment variables (for Macs, it usually goes to `~/.zshrc` or `~/.zprofile`)
 ```bash
 export ARTIFACTORY_USERNAME="...."        # generated 'Username'
@@ -89,7 +89,7 @@ pnpm nx run-many --target=test --all
 ```
 &nbsp;
 ## Resources
-### NAX Resources
-- [NAX Front-End Documentation](https://front-end.docs.platform.naxgrp.com)
-- [NAX Components Library Storybook](https://front-end.docs.platform.naxgrp.com/component-library/index.html)
+### p6m Resources
+- [p6m Front-End Documentation](https://front-end.docs.p6m.dev)
+- [p6m Components Library Storybook](https://front-end.docs.p6m.dev/component-library/index.html)
 &nbsp;

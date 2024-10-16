@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { useTranslation } from '@nax-tech/i18n';
-import { compose } from '@nax-tech/utils-components';
+import { useTranslation } from '@p6m-dev/i18n';
+import { compose } from '@p6m-dev/utils-components';
 import { withUser, isLoaded, UserState } from '@{{package-name}}/context';
 import { UserForm } from '../../components';
 

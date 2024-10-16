@@ -10,13 +10,13 @@ context += render(Archetype("org-prompts"), ANSWERS);
 context += prompt("Root directory: ", "project-name", #{
     defaults_with: "front-end-apps",
 });
-context += set("package-name", render("{{ org-name }}-{{ venture-name }}", context));
+context += set("package-name", render("{{ org-name }}-{{ solution-name }}", context));
 context += set("org-prefix", render("{{ org-name }}", context));
-context += set("org-suffix", render("{{ venture-name }}", context));
+context += set("org-suffix", render("{{ solution-name }}", context));
 context += set("prj-prefix", "front-end");
 context += set("prj-suffix", "apps");
 context += set("prj-suffix", "apps");
-context += set("organization-name", render("{{ org-name }}-{{ venture-name }}", context), #{
+context += set("organization-name", render("{{ org-name }}-{{ solution-name }}", context), #{
     cases: [
         CasedIdentityCasedValue(PROGRAMMING_CASES),
     ],

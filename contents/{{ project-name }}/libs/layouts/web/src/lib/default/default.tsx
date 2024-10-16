@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cx from 'classnames';
 import { twMerge } from 'tailwind-merge';
-import { DefaultProps } from '@nax-tech/components-web';
+import { DefaultProps } from '@p6m-dev/components-web';
 import { Header } from './header';
 import { Footer } from './footer';
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useState, MouseEvent } from 'react';
 import cx from 'classnames';
-import { IconMenuOutlined, IconCloseOutlined } from '@nax-tech/icons-web';
+import { IconMenuOutlined, IconCloseOutlined } from '@p6m-dev/icons-web';
 import styles from './default.module.css';
 import { Navigation } from './navigation';
 

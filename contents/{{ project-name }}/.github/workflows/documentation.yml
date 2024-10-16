@@ -6,6 +6,6 @@ run-name: Deploy Documentation
 
 jobs:
   deploy_docs:
-    uses: nax-tech/github-actions/.github/workflows/build-deploy-front-end-docs.yaml@nx-19
+    uses: p6m-dev/github-actions/.github/workflows/build-deploy-front-end-docs.yaml@nx-19
     secrets:
       ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}

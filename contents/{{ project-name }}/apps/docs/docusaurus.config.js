@@ -57,7 +57,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} NAX Group.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ybor.ai.`,
       },
       prism: {
         theme: lightCodeTheme,

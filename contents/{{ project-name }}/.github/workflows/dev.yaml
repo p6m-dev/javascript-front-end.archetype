@@ -11,7 +11,7 @@ run-name: Dev Build & Deploy
 
 jobs:
   build_and_deploy:
-    uses: nax-tech/github-actions/.github/workflows/build-deploy-front-end-container.yaml@nx-19
+    uses: p6m-dev/github-actions/.github/workflows/build-deploy-front-end-container.yaml@nx-19
     secrets:
       ARTIFACTORY_USERNAME: ${{'{'}}{ secrets.ARTIFACTORY_USERNAME }}
       ARTIFACTORY_IDENTITY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
@@ -23,4 +23,4 @@ jobs:
       CONTENTFUL_ENVIRONMENT_ID: ${{'{'}}{ secrets.CONTENTFUL_ENVIRONMENT_ID }}
     with:
       REACT_APP_ENV: "dev"
-      ARTIFACTORY_REGISTRY: "naxgrp.jfrog.io"
+      ARTIFACTORY_REGISTRY: "p6m.jfrog.io"

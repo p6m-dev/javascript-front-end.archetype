@@ -11,7 +11,7 @@ run-name: Deploy ${{'{'}}{ inputs.tag }} to Stage by @${{'{'}}{ github.triggerin
 jobs:
   promote:
     name: Promote Tag with Digest
-    uses: nax-tech/github-actions/.github/workflows/promote-app-tag-with-digest.yaml@nx-19
+    uses: p6m-dev/github-actions/.github/workflows/promote-app-tag-with-digest.yaml@nx-19
     with:
       target-env: stg
       tag: ${{'{'}}{ inputs.tag }}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { IconSun, IconMoon } from '@nax-tech/icons-web';
+import { IconSun, IconMoon } from '@p6m-dev/icons-web';
 
 export const ModeSwitch = () => {
   const [isDarkMode, toggleMode] = useState(false);

@@ -48,7 +48,7 @@ export function Navigation() {
       <NavHeader>Design System - Figma</NavHeader>
       <NavSection>
         <NavLink href="#ui-template">UI Template</NavLink>
-        <NavLink href="#nax-components-library">NAX Components Library</NavLink>
+        <NavLink href="#p6m-components-library">p6m Components Library</NavLink>
       </NavSection>
 
       <NavHeader>Support</NavHeader>

@@ -4,7 +4,7 @@ import { create } from '@storybook/theming';
 export default create({
   base: 'light',
   brandTitle: '{{package-name}} Components Library',
-  brandUrl: 'https://nax.gitlab.io/ui/nax-component-library/',
+  brandUrl: 'https://p6m.gitlab.io/ui/p6m-component-library/',
   // brandImage,
   colorPrimary: '#e38302',
   colorSecondary: '#028fe2',

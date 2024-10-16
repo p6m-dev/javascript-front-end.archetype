@@ -16,5 +16,5 @@ export const routes: { [key: string]: Route } = {
     t: 'routes.profile',
     isSecondaryNavigation: true,
   },
-  // INTEGRATION: @nax-tech/react:feature route
+  // INTEGRATION: @p6m-dev/react:feature route
 };

@@ -14,7 +14,7 @@ export default {
     ],
   },
   transformIgnorePatterns: [
-    '../../../node_modules/(?!(@nax-tech/clients-contentful)/)',
+    '../../../node_modules/(?!(@p6m-dev/clients-contentful)/)',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/services',

@@ -13,7 +13,7 @@ run-name: E2E Smoke testing
 jobs:
   tag_version:
     name: Tag Version
-    uses: nax-tech/github-actions/.github/workflows/test-e2e.yml@nx-19
+    uses: p6m-dev/github-actions/.github/workflows/test-e2e.yml@nx-19
     secrets:
       ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}
       ARTIFACTORY_USERNAME: ${{'{'}}{ secrets.ARTIFACTORY_USERNAME }}

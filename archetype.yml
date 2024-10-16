@@ -1,6 +1,6 @@
 ---
-description: "NAX Front-End Codebase Archetype"
-authors: ["Victor Yurkin <victor.yurkin@naxgrp.com>"]
+description: "Front-End Codebase Archetype"
+authors: ["Jose Pimienta"]
 languages: ["TypeScript"]
 frameworks: ["React.js", "Next.js", "React Native"]
 tags: ["Front End", "UI", "Service", "Monorepo"]
@@ -9,5 +9,5 @@ requires:
   archetect: 2.0.0-ALPHA.8
 
 components:
-  org-prompts: git@github.com:nax-platform/org-prompts.archetype.git
+  org-prompts: git@github.com:p6m-dev/org-prompts.archetype.git
   gitignore: https://github.com/archetect/dot-gitignore.archetype.git

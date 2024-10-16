@@ -1,8 +1,8 @@
-name: Update NAX dependencies
+name: Update p6m dependencies
 
 on:
   repository_dispatch:
-    types: [nax_update_deps]
+    types: [p6m_update_deps]
 
 env:
   GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
@@ -27,13 +27,13 @@ jobs:
         run: npm install -g pnpm
 
       - name: Update dependencies
-        run: ./.github/scripts/update-nax-packages.sh
+        run: ./.github/scripts/update-p6m-packages.sh
         shell: bash
 
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          message: "chore(core): AUTOMATED - Updating the NAX dependencies"
+          message: "chore(core): AUTOMATED - Updating the p6m dependencies"
 
 

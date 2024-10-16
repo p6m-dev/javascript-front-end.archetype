@@ -53,29 +53,29 @@ jobs:
       - name: generate react app
         run: |
           cd front-end-apps
-          pnpm update-nax
-          pnpm exec nx generate @nax-tech/react:application --name=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:component --name=component1 --project=components-web --no-interactive
-          pnpm exec nx generate @nax-tech/react:library --name=library1 --importPath=path --no-interactive
-          pnpm exec nx generate @nax-tech/react:context --name=context1 --project=context --no-interactive
-          pnpm exec nx generate @nax-tech/react:service --name=service1 --project=services --no-interactive
-          pnpm exec nx generate @nax-tech/react:form --name=form1 --fields=firstName --project=components-web --no-interactive
-          pnpm exec nx generate @nax-tech/react:integrate-graphql --devUrl=devUrl --project=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:integrate-pwa --project=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:integrate-auth --audience=audience --clientId=clientId --domain=domain --project=ra --no-interactive
-          pnpm exec nx generate @nax-tech/react:integrate-gtm --id=tagId --project=ra --no-interactive
+          pnpm update-p6m
+          pnpm exec nx generate @p6m-dev/react:application --name=ra --no-interactive
+          pnpm exec nx generate @p6m-dev/react:component --name=component1 --project=components-web --no-interactive
+          pnpm exec nx generate @p6m-dev/react:library --name=library1 --importPath=path --no-interactive
+          pnpm exec nx generate @p6m-dev/react:context --name=context1 --project=context --no-interactive
+          pnpm exec nx generate @p6m-dev/react:service --name=service1 --project=services --no-interactive
+          pnpm exec nx generate @p6m-dev/react:form --name=form1 --fields=firstName --project=components-web --no-interactive
+          pnpm exec nx generate @p6m-dev/react:integrate-graphql --devUrl=devUrl --project=ra --no-interactive
+          pnpm exec nx generate @p6m-dev/react:integrate-pwa --project=ra --no-interactive
+          pnpm exec nx generate @p6m-dev/react:integrate-auth --audience=audience --clientId=clientId --domain=domain --project=ra --no-interactive
+          pnpm exec nx generate @p6m-dev/react:integrate-gtm --id=tagId --project=ra --no-interactive
           pnpm add react-gtm-module @types/react-gtm-module
-          pnpm exec nx generate @nax-tech/react:integrate-flags --devClientSideId=id --project=ra --no-interactive
-          pnpm add @nax-tech/feature-flags-react
-          pnpm exec nx generate @nax-tech/react:integrate-logger --devApiKey=apiKey --devUrl=url --project=ra --no-interactive
+          pnpm exec nx generate @p6m-dev/react:integrate-flags --devClientSideId=id --project=ra --no-interactive
+          pnpm add @p6m-dev/feature-flags-react
+          pnpm exec nx generate @p6m-dev/react:integrate-logger --devApiKey=apiKey --devUrl=url --project=ra --no-interactive
 
       - name: generate next app
         run: |
           cd front-end-apps
-          pnpm exec nx generate @nax-tech/next:application --name=next --no-interactive
-          pnpm exec nx generate @nax-tech/next:service-content --contentType=wwww --project=next --no-interactive
-          pnpm exec nx generate @nax-tech/next:integrate-gtm --id=q111 --project=next --no-interactive
-          pnpm exec nx generate @nax-tech/next:integrate-logger --devApiKey=key --devUrl=url --project=next --no-interactive
+          pnpm exec nx generate @p6m-dev/next:application --name=next --no-interactive
+          pnpm exec nx generate @p6m-dev/next:service-content --contentType=wwww --project=next --no-interactive
+          pnpm exec nx generate @p6m-dev/next:integrate-gtm --id=q111 --project=next --no-interactive
+          pnpm exec nx generate @p6m-dev/next:integrate-logger --devApiKey=key --devUrl=url --project=next --no-interactive
 
       - name: ls fodler
         run: |
