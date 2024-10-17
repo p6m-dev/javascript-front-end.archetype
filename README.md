@@ -1,9 +1,13 @@
-# Front-End Project Template
+<img src="logo.svg" width="128">
+
+# Front-End Archetype
+
 ## Usage
 To get started, [install archetect](https://archetect.github.io/getting_started.html)
 and render this template to your current working directory:
+
 ```bash
-archetect render git@github.com:p6m-dev/javascript-front-end-archetype.git
+archetect render git@github.com:p6m-dev/javascript-front-end.archetype.git
 ```
 For information about interacting with the service, refer to the README at the generated project's root.
 

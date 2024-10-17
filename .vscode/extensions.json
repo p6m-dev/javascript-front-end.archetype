@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "rhaiscript.vscode-rhai",
+        "redhat.vscode-yaml"
+    ]
+}
