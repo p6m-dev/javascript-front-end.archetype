@@ -1,9 +1,10 @@
+import { action } from '@storybook/addon-actions';
 import { Logo } from './logo';
 import type { StoryObj, Meta } from '@storybook/react';
 
 export default {
   component: Logo,
-  title: 'Components/Logo',
+  title: 'Assets/Logos/p6m',
   argTypes: {
     className: {
       control: {
@@ -25,11 +26,10 @@ export default {
         type: 'text',
       },
     },
+    t: {
+      control: {
+        type: 'text',
+      },
+    },
   },
 } as Meta<typeof Logo>;
-
-type Story = StoryObj<typeof Logo>;
-
-export const Default: Story = {
-  args: {},
-};

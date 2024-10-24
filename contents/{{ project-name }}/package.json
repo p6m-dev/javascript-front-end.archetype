@@ -26,6 +26,7 @@
     "@p6m-dev/clients-logger": "^1.2.2",
     "@p6m-dev/clients-session": "^1.2.2",
     "@p6m-dev/components-web": "^5.14.4",
+    "@p6m-dev/features-template": "^1.12.2",
     "@p6m-dev/hooks": "^1.2.2",
     "@p6m-dev/i18n": "^1.2.2",
     "@p6m-dev/icons-web": "^1.7.2",
