@@ -33,6 +33,8 @@ export const UserForm: FC<Props> = ({
     mutationFn: (draft: { [key: string]: unknown }) => void
   ) => Promise<void>;
 
+  const rules = { required: true };
+
   const {
     control,
     handleSubmit,
@@ -69,7 +71,7 @@ export const UserForm: FC<Props> = ({
             name="firstName"
             control={control}
             defaultValue={object['firstName'] || ''}
-            rules={{ required: true }}
+            rules={rules}
             render={({ field }) => (
               <Input
                 {...field}
@@ -91,7 +93,7 @@ export const UserForm: FC<Props> = ({
             name="lastName"
             control={control}
             defaultValue={object['lastName'] || ''}
-            rules={{ required: true }}
+            rules={rules}
             render={({ field }) => (
               <Input
                 {...field}
