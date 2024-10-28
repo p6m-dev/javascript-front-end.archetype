@@ -134,6 +134,14 @@ if context.pnpm_install == true && context.app_type != "None" {
         });
     }
 
+    execute("git", #{
+        args: [
+            "add",
+            "."
+        ],
+        directory: context["root-directory"],
+    }); 
+
     execute("pnpm", #{
         args: [
             "exec",
