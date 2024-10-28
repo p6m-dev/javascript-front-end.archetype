@@ -21,7 +21,7 @@ describe('Logo', () => {
   // Test optional properties
   it('property > className', () => {
     const { getByTestId } = render(
-      <Logo testId={propTestId} className={propClassName} />,
+      <Logo testId={propTestId} className={propClassName} />
     );
     expect(getByTestId(propTestId)).toHaveClass(propClassName);
   });
@@ -33,11 +33,11 @@ describe('Logo', () => {
 
   it('property > ariaLabel', () => {
     const { getByTestId } = render(
-      <Logo testId={propTestId} ariaLabel={propAriaLabel} />,
+      <Logo testId={propTestId} ariaLabel={propAriaLabel} />
     );
     expect(getByTestId(propTestId)).toHaveAttribute(
       'aria-label',
-      propAriaLabel,
+      propAriaLabel
     );
   });
 
@@ -49,9 +49,7 @@ describe('Logo', () => {
   // Handlers and other methods
   it('should handle a click event', () => {
     const mock = jest.fn();
-    const { getByTestId } = render(
-      <Logo testId={propTestId} onClick={mock} />,
-    );
+    const { getByTestId } = render(<Logo testId={propTestId} onClick={mock} />);
     fireEvent.click(getByTestId(propTestId));
     expect(mock).toHaveBeenCalled();
   });

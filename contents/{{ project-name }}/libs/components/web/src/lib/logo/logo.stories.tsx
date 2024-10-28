@@ -1,6 +1,5 @@
-import { action } from '@storybook/addon-actions';
 import { Logo } from './logo';
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 export default {
   component: Logo,
@@ -33,3 +32,9 @@ export default {
     },
   },
 } as Meta<typeof Logo>;
+
+type Story = StoryObj<typeof Logo>;
+
+export const Default: Story = {
+  args: {},
+};

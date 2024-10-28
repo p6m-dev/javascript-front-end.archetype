@@ -9,7 +9,7 @@ run-name: Test
 
 jobs:
   test:
-    uses: p6m-dev/github-actions/.github/workflows/test-front-end.yaml@nx-19
+    uses: p6m-dev/github-actions/.github/workflows/test-front-end.yaml@main
     with:
       REACT_APP_ENV: "dev"
     secrets:
