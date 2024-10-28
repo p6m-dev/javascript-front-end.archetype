@@ -4,6 +4,8 @@ on:
   repository_dispatch:
     types: [p6m_update_deps]
 
+permissions: write-all
+
 env:
   GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
 

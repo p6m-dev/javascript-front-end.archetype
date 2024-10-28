@@ -5,6 +5,8 @@ on:
     branches:
       - main
 
+permissions: write-all
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
