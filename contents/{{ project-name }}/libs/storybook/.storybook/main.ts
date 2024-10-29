@@ -6,15 +6,17 @@ import type { StorybookConfig } from '@storybook/react-vite';
 const config: StorybookConfig = {
   ...rootMain,
   core: { ...rootMain.core, builder: '@storybook/builder-vite' },
+
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
-  stories: [
-    '../../design-system/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../../components/web/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../../features/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+
+  stories: ['../../design-system/src/lib/**/*.@(mdx|stories.@(js|jsx|ts|tsx))', '../../components/web/src/lib/**/*.@(mdx|stories.@(js|jsx|ts|tsx))', '../../features/**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],
+  addons: [
+    '@storybook/addon-essentials',
+    ...(rootMain.addons || []),
   ],
-  addons: ['@storybook/addon-essentials', ...(rootMain.addons || [])],
+
   viteFinal: async (config, options) => {
     if (!config.plugins) {
       config.plugins = [];
@@ -26,6 +28,8 @@ const config: StorybookConfig = {
     );
     return config;
   },
+
+  docs: {}
 };
 
 module.exports = config;

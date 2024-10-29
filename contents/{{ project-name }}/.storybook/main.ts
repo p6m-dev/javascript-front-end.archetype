@@ -14,8 +14,10 @@ export const framework = {
   options: {}
 };
 
-export const addons = ['@chromatic-com/storybook'];
-
 export const typescript = {
   reactDocgen: 'react-docgen-typescript'
+};
+
+export const docs = {
+  autodocs: true
 };
