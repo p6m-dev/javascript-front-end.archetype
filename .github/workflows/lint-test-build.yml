@@ -43,8 +43,7 @@ jobs:
 
       - name: Install archetect from source
         run: |
-            git clone https://github.com/archetect/archetect.git
-            cargo install archetect --force
+            cargo install --git https://github.com/archetect/archetect.git
 
       # - name: Install archetect from crates.io
       #   uses: baptiste0928/cargo-install@v2
