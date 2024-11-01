@@ -41,10 +41,14 @@ jobs:
         with:
           toolchain: stable
 
-      - name: Install archetect from crates.io
-        uses: baptiste0928/cargo-install@v2
-        with:
-          crate: archetect
+      - name: Install archetect from source
+        run: |
+            cargo install --git https://github.com/archetect/archetect.git archetect
+
+      # - name: Install archetect from crates.io
+      #   uses: baptiste0928/cargo-install@v2
+      #   with:
+      #     crate: archetect
 
       - name: archetect version
         run: archetect --version
