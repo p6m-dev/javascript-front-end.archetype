@@ -87,6 +87,5 @@
         "linter": "eslint"
       }
     }
-  },
-  "defaultProject": "webapp"
+  }
 }
