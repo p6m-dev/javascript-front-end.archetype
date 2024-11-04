@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import viteTsConfigPaths from 'vite-tsconfig-paths';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { rootMain } from '../../../.storybook/main';
 import type { StorybookConfig } from '@storybook/react-vite';
 
