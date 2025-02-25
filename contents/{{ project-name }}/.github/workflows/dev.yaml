@@ -23,4 +23,4 @@ jobs:
       CONTENTFUL_ENVIRONMENT_ID: ${{'{'}}{ secrets.CONTENTFUL_ENVIRONMENT_ID }}
     with:
       REACT_APP_ENV: "dev"
-      ARTIFACTORY_REGISTRY: "p6m.jfrog.io"
+      ARTIFACTORY_REGISTRY: ${{'{'}}{ vars.ARTIFACTORY_HOSTNAME }}
