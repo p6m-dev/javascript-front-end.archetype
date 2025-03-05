@@ -6,6 +6,8 @@ on:
         description: Application
         options:
         - ""
+        
+permissions: write-all
 
 name: 2. Tag & Release
 run-name: Tag & Release by @${{'{'}}{ github.triggering_actor }}
