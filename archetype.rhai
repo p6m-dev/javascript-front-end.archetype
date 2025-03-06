@@ -23,6 +23,9 @@ context += prompt("Root directory: ", "project-name", #{
         CasedIdentityCasedValue(PROGRAMMING_CASES),
     ],
 });
+context += prompt("Artifactory Host:", "artifactory-host", #{
+    defaults_with: "p6m.jfrog.io",
+});
 context += set("package-name", render("{{ org-name }}-{{ solution-name }}", context));
 context += set("org-prefix", render("{{ org-name }}", context));
 context += set("org-suffix", render("{{ solution-name }}", context));
@@ -34,7 +37,6 @@ context += set("organization-name", render("{{ org-name }}-{{ solution-name }}",
         CasedIdentityCasedValue(PROGRAMMING_CASES),
     ],
 });
-context += set("root-directory", render("{{ project-name }}", context));
 
 context += set("root-directory", render("{{ project-name }}", context));
 
