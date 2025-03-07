@@ -3,5 +3,6 @@
     "orgSuffix": "{{org-suffix}}",
     "deliveryType": "container",
     "prjPrefix": "{{prj-prefix}}",
-    "prjSuffix": "{{prj-suffix}}"
+    "prjSuffix": "{{prj-suffix}}",
+    "artifactoryHost": "{{artifactory-host}}"
 }

@@ -94,7 +94,7 @@
     "@p6m-dev/design-system": "^2.4.2",
     "@p6m-dev/javascript": "^1.1.4",
     "@p6m-dev/next": "3.8.0",
-    "@p6m-dev/react": "4.25.0",
+    "@p6m-dev/react": "4.26.0",
     "@storybook/addon-actions": "^8.3.6",
     "@storybook/addon-backgrounds": "^8.3.6",
     "@storybook/addon-docs": "^8.3.6",
