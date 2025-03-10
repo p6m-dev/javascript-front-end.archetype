@@ -14,12 +14,16 @@ For information about interacting with the service, refer to the README at the g
 ## Prompts
 When rendering the archetype, you'll be prompted for the following values:
 
-| Property | Description | Example | Default |
-|----------| ----------- | ------- | ------- |
-| `Org Prefix`| Organization name | ashley | 
-| `Org Suffix (Project)`| Project name  | dp | 
-| `Front-end application`| Create front-end application to get started | 4 | `4`
-| `Front-end applications root directory`| Front-end applications root directory | front-end-apps | `front-end-apps`
+| Property | Description | Example | Default | Answer File Field | Optional |
+|----------| ----------- | ------- | ------- | ---------------- | -------- |
+| Organization Name | Organization identifier | ashley | - | org-name | No |
+| Project Name | Solution identifier | dp | - | solution-name | No |
+| Root Directory | Root directory name | front-end-apps | front-end-apps | project-name | Yes |
+| Artifactory Host | Artifactory host URL | p6m.jfrog.io | p6m.jfrog.io | artifactory-host | Yes |
+| Install Dependencies | Run pnpm install after setup | y | y | pnpm_install | Yes |
+| Initialize Git | Initialize Git repository | y | y | git_init | Yes |
+| Application Type | Initial application type | React | React | app_type | Yes |
+| Application Name | Application name | web | - | app_name | No |
 
 For a list of all derived properties and examples of the property relationships, see [archetype.yml](./archetype.yml).
 
