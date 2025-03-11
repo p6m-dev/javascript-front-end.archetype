@@ -23,4 +23,3 @@ jobs:
       ARTIFACTORY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_TOKEN }}
     with:
       NX_APP: ${{'{'}}{ github.event.inputs.app }}
-      ARTIFACTORY_REGISTRY: ${{'{'}}{ vars.ARTIFACTORY_HOSTNAME }}
