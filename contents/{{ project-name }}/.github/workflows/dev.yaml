@@ -5,6 +5,9 @@ on:
     paths-ignore:
       - "docs/**"
       - "README.md"
+  workflow_dispatch:
+    branches:
+      - main
 
 name: 1. Dev Build & Deploy
 run-name: Dev Build & Deploy
